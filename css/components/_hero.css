@@ -134,56 +134,50 @@
       font-size: clamp(2.4rem, 8vw, 3.8rem);
     }
   }
-  /* Ajustes no conteúdo */
-.hero-content {
-    padding: 8rem 1.5rem 6rem;
-  }
-  
-  .hero-title {
-    font-size: clamp(2.8rem, 7vw, 5.2rem);
-    line-height: 1.12;
-  }
-  
-  .hero-subtitle {
-    font-size: clamp(1.25rem, 2.5vw, 1.7rem);
-    max-width: 520px;
-  }
-  
-  /* Ícones flutuantes na direita */
-  .module-icons-floating {
-    position: relative;
-    height: 100%;
-    display: grid;
+  /* HERO - Ícones em 2 colunas x 3 linhas */
+.module-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+  max-width: 460px;
+}
+
+.module-card {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+  padding: 1.8rem 1.4rem;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  transition: all 0.35s ease;
+}
+
+.module-card i {
+  font-size: 2.6rem;
+  color: #ffc107;
+  margin-bottom: 0.8rem;
+}
+
+.module-card span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+
+/* Hover premium */
+.module-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(255, 193, 7, 0.22);
+  border-color: rgba(255, 193, 7, 0.55);
+  box-shadow: 0 18px 40px rgba(255, 193, 7, 0.25);
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .module-icons-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    transform: translateX(15%);
+    max-width: 100%;
   }
-  
-  .module-icon {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1.4rem;
-    border-radius: 16px;
-    text-align: center;
-    backdrop-filter: blur(8px);
-    transition: all 0.4s ease;
-  }
-  
-  .module-icon:hover {
-    transform: translateY(-10px) scale(1.05);
-    background: rgba(255, 193, 7, 0.2);
-    border-color: #ffc10766;
-  }
-  
-  /* Mobile: ícones voltam para baixo, centralizados */
-  .module-icons-mobile {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.2rem;
-  }
-  
-  @media (max-width: 991px) {
-    .hero-content { padding-top: 6rem; }
-    .module-icons-floating { display: none; }
-  }
+}
