@@ -1,0 +1,108 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="./img/logo/logo-sai.png" alt="S@I - Sistema APAE" height="52">
+      </a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" 
+              aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-home d-lg-none me-2"></i>Início
+            </a>
+          </li>
+  
+          <!-- Dropdown Módulos -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+               data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-th-large d-lg-none me-2"></i>Módulos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="educacao.html">
+                  <i class="fas fa-book-reader"></i>
+                  <span>Pedagógico</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="saude.html">
+                  <i class="fas fa-stethoscope"></i>
+                  <span>Saúde</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="social.html">
+                  <i class="fas fa-hand-holding-heart"></i>
+                  <span>Assistência Social</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="financeiro.html">
+                  <i class="fas fa-dollar-sign"></i>
+                  <span>Financeiro</span>
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" href="index.html#modulos">
+                  <i class="fas fa-list"></i>
+                  <span>Ver Todos os Módulos</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" href="quem-somos.html">
+              <i class="fas fa-users d-lg-none me-2"></i>Quem Somos
+            </a>
+          </li>
+  
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="https://wa.me/5567981742192?text=Quero%20agendar%20uma%20demonstra%C3%A7%C3%A3o%20do%20S%40I">
+              <i class="fab fa-whatsapp me-2"></i>Contato
+            </a>
+          </li>
+        </ul>
+  
+        <a href="https://wa.me/5567981742192?text=Quero%20agendar%20uma%20demonstra%C3%A7%C3%A3o%20do%20S%40I" 
+           class="btn btn-warning ms-lg-3 px-4 d-none d-lg-inline-flex align-items-center gap-2">
+          <i class="fab fa-whatsapp"></i> Demonstração
+        </a>
+      </div>
+    </div>
+  </nav>
+  
+  <style>
+  /* Estilos adicionais inline para garantir funcionamento */
+  .dropdown-divider {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 0;
+  }
+  
+  .navbar-nav .dropdown-item span {
+    flex: 1;
+  }
+  
+  /* Animação suave no dropdown */
+  .dropdown-menu {
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  </style>

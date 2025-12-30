@@ -1,0 +1,113 @@
+/* Benefits Section */
+.results-section {
+    background: linear-gradient(to bottom, var(--light) 0%, var(--white) 100%);
+    padding: 5rem 0;
+  }
+  
+  .results-section h2 {
+    color: var(--primary-dark);
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  .results-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+    border-radius: 2px;
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .benefit-item {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    border: 2px solid transparent;
+    text-align: center;
+  }
+  
+  .benefit-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--secondary);
+  }
+  
+  .benefit-item i {
+    font-size: 3.5rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    transition: transform var(--transition-normal);
+  }
+  
+  .benefit-item:hover i {
+    transform: rotate(5deg) scale(1.1);
+  }
+  
+  .benefit-item h4 {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .benefit-item p {
+    color: #666;
+    margin-bottom: 0;
+    line-height: 1.7;
+  }
+  
+  /* Stats Section */
+  .stats-section {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-darker) 100%);
+    padding: 4rem 0;
+    color: var(--white);
+  }
+  
+  .stat-item {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--secondary);
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+  }
+  
+  .stat-label {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .benefit-item {
+      padding: 2rem 1.5rem;
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+    }
+  }
