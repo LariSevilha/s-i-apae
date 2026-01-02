@@ -888,3 +888,188 @@ footer .text-center {
 @media (min-width: 576px) and (max-width: 991px) {
   .module-icons-mobile { gap: 1.5rem; }
 }
+
+/* ─────────────────────────────────────────────────────────────
+   MÓDULOS INTEGRADOS - Versão mais moderna e elegante 2025/2026
+   ───────────────────────────────────────────────────────────── */
+
+   .modules-section {
+    background: linear-gradient(to bottom, #f8f5fc 0%, #ffffff 50%, #f8f5fc 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .modules-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 15% 20%, rgba(90,63,114,0.06) 0%, transparent 40%);
+    pointer-events: none;
+  }
+  
+  /* Título da seção */
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    font-weight: 700;
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.8rem;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 4px;
+    background: var(--secondary);
+    border-radius: 4px;
+  }
+  
+  .section-subtitle {
+    color: var(--gray);
+    max-width: 680px;
+    margin: 1.8rem auto 0;
+    font-weight: 400;
+  }
+  
+  /* Card principal */
+  .module-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 2.5rem 2rem;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(90,63,114,0.08);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .module-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 22px 50px rgba(90,63,114,0.12);
+    border-color: var(--secondary);
+  }
+  
+  /* Círculo/ícone superior */
+  .module-icon-wrapper {
+    width: 88px;
+    height: 88px;
+    background: rgba(255,193,7,0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.8rem;
+    transition: all 0.4s ease;
+    border: 2px solid rgba(255,193,7,0.25);
+  }
+  
+  .module-card:hover .module-icon-wrapper {
+    background: var(--secondary);
+    transform: scale(1.12) rotate(8deg);
+  }
+  
+  .module-icon-wrapper i {
+    font-size: 2.6rem;
+    color: var(--secondary);
+    transition: all 0.4s ease;
+  }
+  
+  .module-card:hover .module-icon-wrapper i {
+    color: var(--primary-dark);
+  }
+  
+  /* Conteúdo do card */
+  .module-card h3 {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.45rem;
+    margin-bottom: 1rem;
+  }
+  
+  .module-card p {
+    color: #5a5a5a;
+    line-height: 1.7;
+    font-size: 0.98rem;
+    margin-bottom: 1.6rem;
+  }
+  
+  /* Botão mais elegante */
+  .module-btn {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 50px;
+    background: rgba(90,63,114,0.06);
+    transition: all 0.35s ease;
+    border: 1px solid rgba(90,63,114,0.15);
+  }
+  
+  .module-btn:hover {
+    background: var(--secondary);
+    color: var(--primary-dark);
+    transform: translateX(8px);
+    border-color: transparent;
+    box-shadow: 0 8px 25px rgba(255,193,7,0.35);
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 1199px) {
+    .module-card {
+      padding: 2.2rem 1.8rem;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .module-icon-wrapper {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .module-icon-wrapper i {
+      font-size: 2.3rem;
+    }
+  }
+
+  .module-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .module-btn-wrapper {
+    margin-top: auto; /* Empurra o botão para o final do card */
+    text-align: center;
+  }
+  
+  .module-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 50px;
+    background: rgba(90, 63, 114, 0.06);
+    transition: all 0.35s ease;
+    border: 1px solid rgba(90, 63, 114, 0.15);
+  }
+  
+  .module-btn:hover {
+    background: var(--secondary);
+    color: var(--primary-dark);
+    transform: translateX(8px);
+    border-color: transparent;
+    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.35);
+  }
