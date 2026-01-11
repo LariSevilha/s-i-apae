@@ -1,0 +1,122 @@
+/* ===============================
+   ESTATÍSTICAS – PREMIUM
+================================ */
+
+.stats-section {
+    position: relative;
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-darker));
+    overflow: hidden;
+  }
+  
+  /* Glow decorativo */
+  .stats-section::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255,193,7,0.25), transparent 70%);
+    border-radius: 50%;
+  }
+  
+  .stats-section::after {
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    right: -200px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(90,63,114,0.5), transparent 70%);
+    border-radius: 50%;
+  }
+  
+  /* Cards */
+  .stat-item {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 1.5rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all .4s ease;
+  }
+  
+  .stat-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+  }
+  
+  /* Número */
+  .stat-number {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--secondary), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .stat-number span {
+    font-size: 1.5rem;
+  }
+  
+  /* Label */
+  .stat-label {
+    margin-top: .8rem;
+    font-size: .95rem;
+    color: rgba(255,255,255,0.85);
+  }
+  
+  .stats-section {
+    padding: 7rem 0;
+    background: linear-gradient(135deg, #5b2d8b, #3a1f5d);
+  }
+  
+  .stat-item {
+    background: rgba(255,255,255,.06);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 2.5rem 1.5rem;
+    height: 100%;
+    transition: all .4s ease;
+  }
+  
+  .stat-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,.1);
+  }
+  
+  .stat-icon {
+    font-size: 2.2rem;
+    color: #ffb400;
+    margin-bottom: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #fff;
+  }
+  
+  .stat-number span {
+    font-size: 1.4rem;
+    opacity: .8;
+  }
+  
+  .stat-label {
+    margin-top: .8rem;
+    font-size: .95rem;
+    color: rgba(255,255,255,.85);
+  }
+  .stats-section h2,
+  .stats-section p {
+    color: #ffffff !important;
+  }
+  
+  .stats-section p {
+    opacity: 0.85;
+  }
+  

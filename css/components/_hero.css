@@ -1,183 +1,127 @@
-/* HERO BASE */
-.hero-video-bg {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    background: #0d1b2a;
-  }
-  
-  /* Vídeo */
-  .hero-video {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    overflow: hidden;
-  }
-  
-  .hero-video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Overlay mais suave e moderno (2025 vibe) */
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    background: linear-gradient(
-      to bottom,
-      rgba(13, 27, 42, 0.88) 0%,
-      rgba(13, 27, 42, 0.65) 40%,
-      rgba(13, 27, 42, 0.92) 100%
-    );
-    /* Adiciona um leve vignette para foco no centro */
-    box-shadow: inset 0 0 120px 40px rgba(0,0,0,0.4);
-  }
-  
-  /* Conteúdo */
-  .hero-content {
-    position: relative;
-    z-index: 3;
-    padding: 7rem 1.5rem 5rem;
-    max-width: 1140px;
-    margin: 0 auto;
-  }
-  
-  /* Badge */
-  .hero-badge {
-    display: inline-block;
-    padding: 0.6rem 1.4rem;
-    border-radius: 999px;
-    background: rgba(255, 193, 7, 0.22);
-    color: #ffc107;
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  
-  /* Título - melhor distribuição */
-  .hero-title {
-    font-size: clamp(2.8rem, 6.5vw, 4.8rem);
-    font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: 1.2rem;
-    text-shadow: 0 6px 40px rgba(0,0,0,0.65);
-  }
-  
-  .hero-title span {
-    color: #ffc107;
-    display: inline-block; /* evita quebra feia */
-  }
-  
-  /* Subtítulo - mais fluido e com propósito */
-  .hero-subtitle {
-    font-size: clamp(1.25rem, 2.4vw, 1.6rem);
-    color: rgba(255, 255, 255, 0.92);
-    max-width: 780px;
-    margin: 0 auto 2.5rem;
-    font-weight: 400;
-    line-height: 1.45;
-  }
-  
-  /* Ícones - mais modernos e responsivos */
-  .module-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1.4rem 2rem;
-    flex-wrap: wrap;
-    margin-top: 3rem;
-  }
-  
-  .module-icon {
-    background: rgba(255, 255, 255, 0.09);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    padding: 1.3rem 1.6rem;
-    border-radius: 16px;
-    text-align: center;
-    min-width: 120px;
-    transition: all 0.35s ease;
-    backdrop-filter: blur(6px); /* efeito glass moderno */
-  }
-  
-  .module-icon:hover {
-    transform: translateY(-8px);
-    background: rgba(255, 193, 7, 0.18);
-    border-color: #ffc10755;
-  }
-  
-  .module-icon i {
-    font-size: 2.1rem;
-    color: #ffc107;
-    margin-bottom: 0.7rem;
-  }
-  
-  .module-icon small {
-    font-size: 0.9rem;
-    color: #fff;
-    font-weight: 500;
-  }
-  
-  /* Mobile */
-  @media (max-width: 768px) {
-    .hero-content {
-      padding: 6rem 1.2rem 4.5rem;
-    }
-    
-    .module-icons {
-      gap: 1.2rem 1.6rem;
-    }
-    
-    .hero-title {
-      font-size: clamp(2.4rem, 8vw, 3.8rem);
-    }
-  }
-  /* HERO - Ícones em 2 colunas x 3 linhas */
+/* ===============================
+   HERO – REORGANIZAÇÃO PREMIUM
+================================ */
+
+.hero {
+  position: relative;
+  background: #000;
+}
+
+/* Vídeo em full */
+.hero-video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay mais elegante */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(42,26,56,.9) 0%, rgba(42,26,56,.75) 40%, rgba(42,26,56,.4) 70%, rgba(42,26,56,.1) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.6), rgba(0,0,0,.4));
+  z-index: 1;
+}
+
+/* Conteúdo */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Badge */
+.hero-badge {
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(8px);
+  padding: .5rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: .85rem;
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+/* Título */
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  line-height: 1.1;
+}
+
+.hero-title span {
+  background: linear-gradient(90deg, var(--secondary), #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtítulo */
+.hero-subtitle {
+  max-width: 550px;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,.9);
+}
+
+/* ===============================
+   CARDS DO HERO (DESKTOP)
+================================ */
+
 .module-icons-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.6rem;
-  max-width: 460px;
+  gap: 1.2rem;
+  position: relative;
 }
 
-.module-card {
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 18px;
-  padding: 1.8rem 1.4rem;
-  text-align: center;
-  backdrop-filter: blur(12px);
-  transition: all 0.35s ease;
-}
-
-.module-card i {
-  font-size: 2.6rem;
-  color: #ffc107;
-  margin-bottom: 0.8rem;
-}
-
-.module-card span {
-  display: block;
-  font-size: 1rem;
-  font-weight: 600;
+.module-icons-grid .module-card {
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.5rem;
   color: #fff;
-  letter-spacing: 0.3px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,.2);
+  transition: all .4s ease;
 }
 
-/* Hover premium */
-.module-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  background: rgba(255, 193, 7, 0.22);
-  border-color: rgba(255, 193, 7, 0.55);
-  box-shadow: 0 18px 40px rgba(255, 193, 7, 0.25);
+.module-icons-grid .module-card i {
+  font-size: 1.5rem;
+  color: var(--secondary);
 }
 
-/* Mobile */
-@media (max-width: 991px) {
-  .module-icons-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 100%;
+.module-icons-grid .module-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  background: rgba(255,255,255,.18);
+}
+
+/* ===============================
+   MOBILE – cartões limpos
+================================ */
+
+.module-card-mobile {
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 1.2rem;
+  color: #fff;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,.2);
+}
+
+.module-card-mobile i {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: .5rem;
+  color: var(--secondary);
+}
+
+/* Ajuste mobile */
+@media(max-width:768px){
+  .hero-title {
+    font-size: 2.5rem;
   }
 }

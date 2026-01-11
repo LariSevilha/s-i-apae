@@ -1,0 +1,109 @@
+/* ===============================
+   FOOTER – RESPONSIVO & PREMIUM
+================================ */
+
+.footer {
+    background: linear-gradient(135deg, #14171d 0%, #1e2229 100%);
+    color: rgba(255,255,255,0.9);
+  }
+  
+  /* Logo */
+  .footer-logo {
+    max-height: 60px;
+    filter: drop-shadow(0 3px 8px rgba(0,0,0,0.5));
+  }
+  
+  /* Títulos */
+  .footer h5 {
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Links gerais */
+  .footer-links a,
+  .contact-list a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 0.35rem 0;
+  }
+  
+  .footer-links a:hover,
+  .contact-list a:hover {
+    color: var(--secondary);
+    padding-left: 6px;
+  }
+  
+  /* Ícones de contato */
+  .contact-list i {
+    color: var(--secondary);
+    min-width: 24px;
+    font-size: 1.3rem;
+  }
+  
+  /* Ícones sociais */
+  .social-icons a {
+    color: rgba(255,255,255,0.85);
+    transition: all 0.35s ease;
+  }
+  
+  .social-icons a:hover {
+    color: var(--secondary);
+    transform: translateY(-4px);
+  }
+  
+  /* Linha divisória */
+  .footer hr {
+    border-color: rgba(255,255,255,0.12);
+    margin: 3rem 0;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 991px) {
+    .footer {
+      padding-top: 5rem;
+      padding-bottom: 3rem;
+    }
+    
+    .footer h5 {
+      margin-top: 1.5rem;
+    }
+    
+    .social-icons {
+      margin-top: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .footer {
+      padding: 4rem 1rem 2.5rem;
+    }
+    
+    .footer h5 {
+      font-size: 1.15rem;
+    }
+    
+    .footer-links a,
+    .contact-list a {
+      font-size: 0.95rem;
+      padding: 0.4rem 0;
+    }
+    
+    .social-icons a i {
+      font-size: 1.8rem;
+    }
+    
+    .footer-logo {
+      height: 48px;
+    }
+  }
+  
+  /* Hover suave em toda a coluna */
+  .footer > .container > .row > div:hover {
+    transform: translateY(-3px);
+    transition: transform 0.4s ease;
+  }

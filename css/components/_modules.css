@@ -1,0 +1,146 @@
+/* MÓDULOS INTEGRADOS – VERSÃO PREMIUM 2026 */
+#modulos {
+    position: relative;
+    padding: 8rem 0 7rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f9f9ff 100%);
+    overflow: hidden;
+  }
+  
+  /* Bolhas decorativas suaves */
+  #modulos::before,
+  #modulos::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.12;
+  }
+  
+  #modulos::before {
+    width: 650px;
+    height: 650px;
+    top: -220px;
+    left: -180px;
+    background: radial-gradient(circle at 40% 30%, #5a3f72, transparent 70%);
+  }
+  
+  #modulos::after {
+    width: 550px;
+    height: 550px;
+    bottom: -200px;
+    right: -150px;
+    background: radial-gradient(circle at 60% 70%, #ffc107, transparent 70%);
+  }
+  
+  /* Título */
+  #modulos h2 {
+    font-weight: 800;
+    background: linear-gradient(90deg, #5a3f72, #9c27b0, #ffc107);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+   
+  
+  /* Cards */
+  .module-card {
+    height: 100%;
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2.8rem 2rem;
+    box-shadow: 0 14px 45px rgba(0,0,0,0.07);
+    border: 1px solid rgba(90,63,114,0.05);
+    transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .module-card:hover {
+    transform: translateY(-16px);
+    box-shadow: 0 30px 70px rgba(90,63,114,0.20);
+  }
+  
+  .module-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(90,63,114,0.05), rgba(255,193,7,0.08), transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .module-card:hover::after {
+    opacity: 1;
+  }
+  
+  /* Ícones */
+  .module-icon-wrapper {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.25rem;
+    background: linear-gradient(135deg, #5a3f72 0%, #7b5aa6 100%);
+    box-shadow: 0 12px 35px rgba(90,63,114,0.40);
+    transition: all 0.4s ease;
+  }
+  
+  .module-card:hover .module-icon-wrapper {
+    transform: scale(1.10) rotate(4deg);
+  }
+  
+  .module-icon-wrapper i {
+    color: white;
+    font-size: 2.5rem;
+  }
+  
+  /* Textos */
+  .module-card h3 {
+    font-family: var(--font-heading, system-ui, -apple-system, sans-serif);
+    color: #5a3f72;
+    font-weight: 700;
+    font-size: 1.38rem;
+    margin-bottom: 1rem;
+  }
+  
+  .module-card p {
+    color: #555;
+    font-size: 0.97rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Botão */
+  .module-btn {
+    font-weight: 700;
+    color: #5a3f72;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .module-btn:hover {
+    color: #9c27b0;
+  }
+  
+  .module-card:hover .module-btn i {
+    transform: translateX(8px);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 991px) {
+    .module-card {
+      padding: 2.4rem 1.8rem;
+    }
+    .module-icon-wrapper {
+      width: 80px;
+      height: 80px;
+    }
+    .module-icon-wrapper i {
+      font-size: 2.2rem;
+    }
+  }

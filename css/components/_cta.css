@@ -1,145 +1,131 @@
-/* CTA Sections */
-.cta-section {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    padding: 5rem 0;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .cta-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(circle at 30% 50%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 70% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%);
-    pointer-events: none;
-  }
-  
-  .cta-section .container {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .cta-section h3 {
-    color: var(--white);
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    margin-bottom: 2rem;
-  }
-  
-  .cta-section p {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.125rem;
-    max-width: 700px;
-    margin: 0 auto 2rem;
-  }
-  
-  .cta-section .btn {
-    margin: 0.5rem;
-    padding: 1rem 2.5rem;
-    font-size: 1.125rem;
-    border-radius: var(--radius-lg);
-    font-weight: 600;
-    box-shadow: var(--shadow-lg);
-    transition: all var(--transition-normal);
-  }
-  
-  .cta-section .btn-warning {
-    background: var(--secondary);
-    color: var(--primary-dark);
-    border: none;
-  }
-  
-  .cta-section .btn-warning:hover {
-    background: var(--secondary-dark);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(255, 193, 7, 0.4);
-  }
-  
-  .cta-section .btn-outline-light {
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: var(--white);
-  }
-  
-  .cta-section .btn-outline-light:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: var(--white);
-    transform: translateY(-3px);
-  }
-  
-  /* Light CTA */
-  .cta-light {
-    background: var(--light);
-    padding: 4rem 0;
-  }
-  
-  .cta-light h3 {
-    color: var(--primary-dark);
-    margin-bottom: 1.5rem;
-  }
-  
-  .cta-light p {
-    color: #666;
-    margin-bottom: 2rem;
-  }
-  
-  /* Footer CTA */
-  footer {
-    background: linear-gradient(to bottom, var(--primary-dark) 0%, var(--primary-darker) 100%);
-    color: rgba(255, 255, 255, 0.9);
-    padding: 3rem 0 1.5rem;
-  }
-  
-  footer h4,
-  footer h5 {
-    color: var(--secondary);
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-  }
-  
-  footer p,
-  footer li {
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 0.75rem;
-    line-height: 1.7;
-  }
-  
-  footer a {
-    color: rgba(255, 255, 255, 0.8);
-    transition: all var(--transition-fast);
-  }
-  
-  footer a:hover {
-    color: var(--secondary);
-    padding-left: 0.25rem;
-  }
-  
-  footer i {
-    color: var(--secondary);
-  }
-  
-  footer hr {
-    border-color: rgba(255, 255, 255, 0.2);
-    margin: 2rem 0;
-  }
-  
-  footer .text-center {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-  /* Responsivo */
-  @media (max-width: 768px) {
-    .cta-section {
-      padding: 3rem 0;
-    }
-    
-    .cta-section .btn {
-      width: 100%;
-      margin: 0.5rem 0;
-    }
-  }
+/* ===============================
+   CTA FINAL – ELEGANTE & RESPONSIVO
+================================ */
 
+.cta-section {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  overflow: hidden;
+  padding: 7rem 1rem;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255,193,7,0.18) 0%,
+    transparent 60%
+  );
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Conteúdo centralizado com largura máxima confortável */
+.cta-content {
+  max-width: 920px;
+}
+
+/* Título */
+.cta-section h2 {
+  font-family: var(--font-heading);
+  background: linear-gradient(90deg, var(--secondary), #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.15;
+}
+
+/* Texto principal */
+.cta-section .lead {
+  max-width: 780px;
+  margin: 0 auto;
+  color: rgba(255,255,255,0.92);
+  font-weight: 400;
+}
+
+/* Botões */
+.cta-buttons .btn {
+  border-radius: 50px;           /* mais elegante */
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  transition: all 0.35s ease;
+  white-space: nowrap;
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+  border: none;
+  color: #1e1e1e;
+  box-shadow: 0 12px 35px rgba(255,193,7,0.45);
+}
+
+.btn-whatsapp:hover,
+.btn-whatsapp:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(255,193,7,0.65);
+  background: linear-gradient(135deg, #ffca2c, #ffb300);
+}
+
+.btn-outline-light {
+  border-width: 2px;
+  color: white;
+  background: transparent;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+  background: white;
+  color: var(--primary-dark);
+  transform: translateY(-4px);
+}
+
+/* Responsividade refinada */
+@media (max-width: 991px) {
+  .cta-section {
+    padding: 6rem 1.5rem;
+  }
   
+  .cta-section h2 {
+    font-size: 2.6rem;
+  }
+  
+  .cta-section .lead {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cta-section {
+    padding: 5rem 1rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 2.1rem;
+    line-height: 1.25;
+  }
+  
+  .cta-section .lead {
+    font-size: 1.15rem;
+  }
+  
+  .cta-buttons {
+    gap: 1.25rem;
+  }
+  
+  .btn-lg {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .btn-whatsapp i {
+    font-size: 1.6rem;
+  }
+}
+
+/* Toque final de elegância */
+.cta-section .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(255,193,7,0.35);
+}
