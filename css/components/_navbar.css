@@ -42,4 +42,35 @@
 .btn-warning:hover {
   background-color: var(--secondary-dark);
   transform: translateY(-2px);
+}/* Dropdown no hover - apenas em telas maiores que o ponto de quebra do navbar (lg = 992px) */
+@media (min-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  /* Remove o gap que causa fechamento rápido ao mover o mouse */
+  .dropdown-menu {
+    margin-top: 0;
+  }
+
+  /* Opcional: impede que o caret fique "preso" no estado ativo */
+  .dropdown-toggle:active,
+  .dropdown-toggle:focus {
+    pointer-events: none;
+  }
+
+  /* Opcional: melhora a experiência visual com uma transição suave */
+  .dropdown-menu {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.25s ease;
+    display: block;        /* já começa como block, mas invisível */
+    pointer-events: none;  /* evita interação quando invisível */
+  }
+
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 }

@@ -14,7 +14,7 @@
 @import "components/_start.css"; 
 @import "components/_footer.css";
 
-@import "components/_quem-somos.css";
+@import "components/_quem-somos.css"; 
 /* Estilos gerais */
 .container {
   --bs-gutter-x: 2rem;
