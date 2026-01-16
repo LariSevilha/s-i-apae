@@ -1,77 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <div id="head-placeholder"></div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Quem Somos - S@I para APAEs</title>
-  <link rel="stylesheet" href="./css/components/_quem-somos.css">
+  <meta name="description" content="Conheça o S@I: sistema completo de gestão para APAEs, desenvolvido para apoiar decisões, planejamento e avaliação institucional.">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
 
+  <!-- NAVBAR -->
   <div id="navbar-placeholder"></div>
 
-  <!-- Hero -->
-  <section class="hero text-white text-center">
-    <div class="container" data-aos="fade-up">
-      <h1 class="display-4 fw-bold mb-4">
-        Transformando a gestão de APAEs<br>
-        <span class="text-warning">com inteligência e eficiência</span>
+  <!-- HERO INTERNO -->
+  <section class="page-hero">
+    <div class="container text-center" data-aos="fade-up">
+      <h1 class="page-hero-title">
+        Transformando vidas por meio da gestão inteligente<br>
+        <span class="hero-highlight">das APAEs</span>
       </h1>
-      <p class="lead fs-4 mb-5">
-        O S@I é uma solução completa para apoiar as APAEs em seus processos de<br>
-        autoavaliação, planejamento e tomada de decisão baseada em dados.
+      
+      <p class="page-hero-subtitle">
+        O S@I é a solução completa que empodera as APAEs com ferramentas modernas de 
+        autoavaliação, planejamento estratégico e decisões baseadas em dados reais.
       </p>
     </div>
   </section>
 
-  <!-- Quem Somos -->
-  <section class="content-section">
+  <!-- QUEM SOMOS -->
+  <section class="about-section">
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-6" data-aos="fade-right">
-          <h2 class="mb-4">Muito mais que um sistema:<br>um parceiro da sua instituição</h2>
-          <p class="lead">
-            O S@I nasceu com o compromisso de fortalecer a gestão das APAEs por meio de tecnologia, conhecimento técnico e apoio contínuo.
+          <h2 class="about-title mb-4">
+            Muito mais que um sistema:<br>
+            um parceiro da sua instituição
+          </h2>
+          <p class="about-lead">
+            O S@I nasceu com o compromisso de fortalecer a gestão das APAEs por meio
+            de tecnologia, conhecimento técnico e apoio contínuo.
           </p>
           <p>
-            Desenvolvido a partir das reais necessidades das APAEs, o S@I atua como uma ponte entre dados e decisões, ajudando a transformar diagnósticos em ações concretas que impactam positivamente a vida dos assistidos e suas famílias.
+            Desenvolvido a partir das reais necessidades das APAEs, o S@I atua como
+            uma ponte entre dados e decisões, ajudando a transformar diagnósticos em
+            ações concretas que impactam positivamente a vida dos assistidos e suas famílias.
           </p>
         </div>
         <div class="col-lg-6" data-aos="fade-left">
-          <img src="https://via.placeholder.com/800x600/5a3f72/ffffff?text=Gest%C3%A3o+Integrada" 
-               class="img-fluid img-shadow" alt="Sistema S@I">
+          <img src="https://via.placeholder.com/800x600/5a3f72/ffffff?text=Gest%C3%A3o+Integrada"
+               alt="Gestão Integrada S@I"
+               class="img-fluid about-image">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Missão, Visão e Valores -->
-  <section class="content-section bg-light">
+  <!-- MISSÃO / VISÃO / VALORES -->
+  <section class="about-section bg-light">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4" data-aos="fade-up">
-          <div class="feature-card text-center h-100">
-            <i class="fas fa-bullseye"></i>
-            <h3>Missão</h3>
+          <div class="about-card text-center">
+            <i class="fas fa-bullseye about-feature-icon"></i>
+            <h3 class="fw-bold">Missão</h3>
             <p>
-              Contribuir com a melhoria da educação especial por meio de uma gestão eficiente, participativa e baseada em dados, fortalecendo o trabalho das APAEs em todo Brasil.
+              Contribuir com a melhoria da educação especial por meio de uma gestão
+              eficiente, participativa e baseada em dados.
             </p>
           </div>
         </div>
+
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-card text-center h-100">
-            <i class="fas fa-eye"></i>
-            <h3>Visão</h3>
+          <div class="about-card text-center">
+            <i class="fas fa-eye about-feature-icon"></i>
+            <h3 class="fw-bold">Visão</h3>
             <p>
-              Ser referência nacional em soluções tecnológicas de avaliação, gestão e planejamento institucional para entidades de educação especial.
+              Ser referência nacional em soluções tecnológicas de avaliação,
+              gestão e planejamento institucional para APAEs.
             </p>
           </div>
         </div>
+
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-card text-center h-100">
-            <i class="fas fa-heart"></i>
-            <h3>Valores</h3>
+          <div class="about-card text-center">
+            <i class="fas fa-heart about-feature-icon"></i>
+            <h3 class="fw-bold">Valores</h3>
             <p>
-              Compromisso com a educação especial, transparência, responsabilidade social, inovação contínua e parceria verdadeira com as APAEs.
+              Compromisso com a educação especial, transparência,
+              responsabilidade social, inovação e parceria.
             </p>
           </div>
         </div>
@@ -79,129 +111,122 @@
     </div>
   </section>
 
-  <!-- Diferenciais -->
-  <section class="content-section">
+  <!-- DIFERENCIAIS -->
+  <section class="about-section">
     <div class="container">
-      <h2 class="text-center mb-5" data-aos="fade-up">
+      <h2 class="about-title text-center mb-4" data-aos="fade-up">
         Solução completa, uso descomplicado
       </h2>
-      <p class="text-center lead mb-5" data-aos="fade-up" data-aos-delay="100">
-        O S@I foi desenvolvido para tornar a rotina das APAEs mais simples, organizada e produtiva.
+      <p class="about-lead text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+        O S@I foi desenvolvido para tornar a rotina das APAEs mais simples,
+        organizada e produtiva.
       </p>
 
       <div class="row g-4">
         <div class="col-md-6" data-aos="fade-up">
-          <div class="benefit-item">
-            <i class="fas fa-cloud"></i>
+          <div class="about-card">
+            <i class="fas fa-cloud about-feature-icon"></i>
             <h4>Sistema 100% Online</h4>
-            <p>Disponível 24 horas, 7 dias por semana. Acesse de qualquer lugar com internet.</p>
+            <p>Acesse de qualquer lugar, com segurança e estabilidade.</p>
           </div>
         </div>
+
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="benefit-item">
-            <i class="fas fa-mobile-alt"></i>
+          <div class="about-card">
+            <i class="fas fa-mobile-alt about-feature-icon"></i>
             <h4>Multiplataforma</h4>
-            <p>Funciona em computador, notebook, tablet e smartphone. Acesse pelo navegador.</p>
+            <p>Compatível com computador, tablet e smartphone.</p>
           </div>
         </div>
+
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="benefit-item">
-            <i class="fas fa-graduation-cap"></i>
+          <div class="about-card">
+            <i class="fas fa-graduation-cap about-feature-icon"></i>
             <h4>Treinamento Completo</h4>
-            <p>Manual detalhado e videoaulas para melhor compreensão de todas as funcionalidades.</p>
+            <p>Capacitação com manuais e videoaulas.</p>
           </div>
         </div>
+
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="benefit-item">
-            <i class="fas fa-headset"></i>
+          <div class="about-card">
+            <i class="fas fa-headset about-feature-icon"></i>
             <h4>Suporte Ágil</h4>
-            <p>Equipe disponível durante todo o horário comercial para atender suas necessidades.</p>
+            <p>Atendimento humano durante todo o horário comercial.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Como Atuamos -->
-  <section class="content-section bg-light">
+  <!-- COMO ATUAMOS -->
+  <section class="about-section bg-light">
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-6 order-lg-2" data-aos="fade-left">
-          <h2 class="mb-4">Apoio técnico de ponta a ponta</h2>
-          <p class="lead">
-            Acompanhamos a implantação do sistema desde a capacitação dos profissionais até a interpretação dos resultados.
+          <h2 class="about-title mb-4">Apoio técnico de ponta a ponta</h2>
+          <p class="about-lead">
+            Acompanhamos cada etapa da implantação e utilização do sistema.
           </p>
           <p>
-            Oferecemos assessoria técnica e suporte próximo às Diretorias e Coordenações, garantindo que cada etapa gere valor real para a instituição e seus assistidos.
+            Nosso suporte garante que os dados gerados se transformem em decisões
+            estratégicas e ações concretas.
           </p>
         </div>
+
         <div class="col-lg-6 order-lg-1" data-aos="fade-right">
-          <ul class="feature-list">
-            <li><i class="fas fa-check-circle text-warning me-3"></i>Relatórios detalhados e visuais</li>
-            <li><i class="fas fa-check-circle text-warning me-3"></i>Acompanhamento de metas e ações</li>
-            <li><i class="fas fa-check-circle text-warning me-3"></i>Apoio à construção do PEI</li>
-            <li><i class="fas fa-check-circle text-warning me-3"></i>Acompanhamento técnico às Diretorias</li>
-            <li><i class="fas fa-check-circle text-warning me-3"></i>Indicadores de desempenho institucional</li>
-            <li><i class="fas fa-check-circle text-warning me-3"></i>Suporte na prestação de contas</li>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i>Relatórios visuais e detalhados</li>
+            <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i>Acompanhamento de metas</li>
+            <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i>Apoio à construção do PEI</li>
+            <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i>Indicadores institucionais</li>
+            <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i>Suporte à prestação de contas</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Equipe -->
-  <section class="content-section">
+  <!-- EQUIPE -->
+  <section class="about-section">
     <div class="container">
-      <h2 class="text-center mb-3" data-aos="fade-up">
+      <h2 class="about-title text-center mb-3" data-aos="fade-up">
         Quem está por trás do S@I
       </h2>
-      <p class="text-center lead mb-5" data-aos="fade-up" data-aos-delay="100">
-        Educadores e especialistas comprometidos com a transformação das instituições de educação especial
+      <p class="about-lead text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+        Profissionais comprometidos com a educação especial
       </p>
 
-      <div class="row justify-content-center g-5 mt-4">
-        <div class="col-lg-5 col-md-6" data-aos="fade-up">
-          <div class="team-card text-center p-4">
-            <div class="team-avatar mb-4">
-              <img src="https://via.placeholder.com/200/5a3f72/ffffff?text=LS" 
-                   class="rounded-circle" alt="Larissa Sara" width="150" height="150">
-            </div>
-            <h4 class="mb-2">Larissa Sara da Cunha</h4>
-            <p class="text-warning fw-semibold mb-3">Co-fundadora & Desenvolvedora</p>
+      <div class="row justify-content-center g-5">
+        <div class="col-md-5" data-aos="fade-up">
+          <div class="about-card text-center">
+            <img src="img/about/larissa-about.png" alt="Larissa Sara" class="rounded-circle mb-4" width="150" height="150">
+            <h4 class="fw-bold text-primary">Larissa Sara da Cunha</h4>
+            <p class="text-warning fw-semibold">Co-fundadora & Desenvolvedora</p>
             <p class="text-muted">
-              Especialista em Aplicações WEB, Graduada em Análise e Desenvolvimento de Sistemas, Especialista em JPA, Fullstack Spring e Angular.
+              Especialista em Aplicações Web, Fullstack Spring e Angular.
             </p>
-            <div class="social-links mt-3">
-              <a href="#" class="text-warning me-3"><i class="fab fa-linkedin"></i></a>
-              <a href="#" class="text-warning"><i class="fas fa-envelope"></i></a>
-            </div>
           </div>
         </div>
 
-        <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="team-card text-center p-4">
-            <div class="team-avatar mb-4">
-              <img src="https://via.placeholder.com/200/412c54/ffffff?text=SS" 
-                   class="rounded-circle" alt="Silvério Luiz" width="150" height="150">
-            </div>
-            <h4 class="mb-2">Silvério Luiz de Sousa</h4>
-            <p class="text-warning fw-semibold mb-3">Co-fundador & Especialista</p>
+        <div class="col-md-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="about-card text-center">
+            <img src="img/about/silver-about.jpg" alt="Silvério Luiz" class="rounded-circle mb-4" width="150" height="150">
+            <h4 class="fw-bold text-primary">Silvério Luiz de Sousa</h4>
+            <p class="text-warning fw-semibold">Co-fundador & Especialista</p>
             <p class="text-muted">
-              Mestre em Meio Ambiente e Tecnologias, Esp. Informática na Educação, Esp. Banco de Dados, Graduado em Análise de Sistemas, Professor de Tecnologias.
+              Mestre em Meio Ambiente e Tecnologias, Professor de Tecnologias.
             </p>
-            <div class="social-links mt-3">
-              <a href="#" class="text-warning me-3"><i class="fab fa-linkedin"></i></a>
-              <a href="#" class="text-warning"><i class="fas fa-envelope"></i></a>
-            </div>
           </div>
         </div>
       </div>
 
       <div class="row mt-5">
         <div class="col-12" data-aos="fade-up">
-          <div class="alert alert-custom alert-info">
+          <div class="about-card">
             <p class="mb-0">
-              <strong>Nossa História:</strong> O S@I nasceu da vivência prática e da escuta atenta às reais necessidades das APAEs. Criado por uma equipe de profissionais com sólida experiência em educação, tecnologia e gestão, o sistema foi desenvolvido com o objetivo de tornar a rotina das instituições mais eficiente, transparente e conectada com os desafios da educação especial atual.
+              <strong>Nossa História:</strong> O S@I nasceu da escuta ativa das APAEs
+              e da experiência prática de seus idealizadores, unindo tecnologia,
+              educação e gestão para transformar realidades.
             </p>
           </div>
         </div>
@@ -209,56 +234,40 @@
     </div>
   </section>
 
-  <!-- CTA Final -->
-  <section class="cta-section text-center">
+  <!-- CTA -->
+  <section class="about-cta text-center">
     <div class="container">
       <h2 class="mb-4" data-aos="fade-up">Quer ver o S@I em ação?</h2>
-      <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">
-        Fale com nossa equipe e agende sua demonstração agora mesmo
-      </p>
-      <p data-aos="fade-up" data-aos-delay="200">
-        Solicite uma demonstração personalizada e entenda como o Sistema pode apoiar<br>
-        sua gestão com inteligência, precisão e impacto real.
+      <p class="about-lead mb-5" data-aos="fade-up" data-aos-delay="100">
+        Agende uma demonstração personalizada
       </p>
 
-      <div class="row justify-content-center mt-5 g-4">
-        <div class="col-md-5" data-aos="fade-up" data-aos-delay="300">
-          <div class="cta-card">
-            <i class="fab fa-whatsapp"></i>
-            <h4>Converse pelo WhatsApp</h4>
-            <a href="https://wa.me/5567981742192?text=Quero%20conhecer%20o%20S%40I" 
-               class="btn btn-warning btn-lg w-100 mt-3">
-               (67) 98174-2192
-            </a>
-          </div>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4" data-aos="fade-up">
+          <a href="https://wa.me/5567981742192" class="btn btn-warning btn-lg w-100">
+            <i class="fab fa-whatsapp me-2"></i> WhatsApp
+          </a>
         </div>
-        <div class="col-md-5" data-aos="fade-up" data-aos-delay="400">
-          <div class="cta-card">
-            <i class="fas fa-envelope"></i>
-            <h4>Envie um e-mail</h4>
-            <a href="mailto:lstecnologiaesolucoes@gmail.com?subject=Demonstra%C3%A7%C3%A3o%20S%40I" 
-               class="btn btn-outline-light btn-lg w-100 mt-3">
-               lstecnologiaesolucoes@gmail.com
-            </a>
-          </div>
-        </div>
-      </div>
 
-      <div class="mt-5" data-aos="fade-up" data-aos-delay="500">
-        <p class="text-white-50">
-          <i class="fas fa-check-circle me-2"></i> Conheça as funcionalidades na prática<br>
-          <i class="fas fa-check-circle me-2"></i> Tire dúvidas com especialistas<br>
-          <i class="fas fa-check-circle me-2"></i> Receba um atendimento humanizado e focado nas necessidades da sua instituição
-        </p>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="mailto:lstecnologiaesolucoes@gmail.com" class="btn btn-outline-light btn-lg w-100">
+            <i class="fas fa-envelope me-2"></i> E-mail
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <div id="footer-placeholder"></div>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({ duration: 800, once: true });</script>
-  <script src="./js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+
 </body>
 </html>
