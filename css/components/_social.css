@@ -1,0 +1,141 @@
+/* ===============================
+   MÓDULO SOCIAL
+================================ */
+
+.social-hero {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    padding: 9rem 1rem 7rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .social-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 80%, rgba(255,193,7,0.25), transparent 60%),
+      radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08), transparent 55%);
+    pointer-events: none;
+  }
+  
+  .social-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 6vw, 4.8rem);
+    font-weight: 800;
+    color: white;
+
+  }
+  
+  .social-hero-subtitle {
+    font-size: 1.4rem;
+    max-width: 760px;
+    margin: 1.2rem auto 0;
+    opacity: 0.95;
+    color: white;
+
+  }
+  
+  /* Seção principal */
+  .social-section {
+    padding: 6rem 1rem;
+  }
+  
+  .social-title {
+    font-family: var(--font-heading);
+    font-size: 2.6rem;
+    color: var(--primary);
+    margin-bottom: 1.4rem;
+    position: relative;
+  }
+  
+  .social-title::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 5px;
+    background: var(--secondary);
+    border-radius: 4px;
+    margin-top: 0.6rem;
+  }
+  
+  .social-text {
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-bottom: 2rem;
+  }
+  
+  /* Lista */
+  .social-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-list li {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    padding-left: 1.8rem;
+    position: relative;
+  }
+  
+  .social-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: 700;
+  }
+  
+  /* Imagem */
+  .social-image {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all 0.6s ease;
+  }
+  
+  .social-image:hover {
+    transform: perspective(1200px) rotateY(-4deg) translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .social-hero {
+      padding: 7rem 1rem 5rem;
+    }
+  
+    .social-title {
+      font-size: 2.2rem;
+    }
+  }
+  
+ /* ======================================
+   VÍDEO / GIF — DESTAQUE
+====================================== */
+
+.social-image-lg {
+    max-width: 115%;
+    margin-left: -5%;
+  }
+  
+  /* sensação de “dashboard flutuando” */
+  .social-image-lg {
+    box-shadow:
+      0 40px 80px rgba(0,0,0,0.22),
+      0 0 0 14px var(--light);
+  }
+  
+  /* hover mais forte */
+  .social-image-lg:hover {
+    transform: perspective(1400px) rotateY(-5deg) translateY(-18px);
+  }
+  
+  /* Mobile: volta ao normal */
+  @media (max-width: 991px) {
+    .social-image-lg {
+      max-width: 100%;
+      margin-left: 0;
+    }
+  }
+  
