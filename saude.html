@@ -3,135 +3,143 @@
 <head>
   <div id="head-placeholder"></div>
   <title>S@I - Gestão de Saúde</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
 
-  <div id="navbar-placeholder"></div>
+<div id="navbar-placeholder"></div>
 
-  <!-- Hero -->
-  <section class="module-hero py-5 text-white text-center">
-    <div class="container">
-      <h1 class="display-4 fw-bold" data-aos="fade-up">Gestão de Saúde</h1>
-      <p class="lead mt-3" data-aos="fade-up" data-aos-delay="100">
-        Prontuário eletrônico, agendamentos, prescrições e acompanhamento multidisciplinar integrado
-      </p>
-    </div>
-  </section>
+<!-- HERO -->
+<section class="health-hero text-white text-center">
+  <div class="container">
+    <h1 class="health-hero-title" data-aos="fade-up">Gestão de Saúde</h1>
+    <p class="health-hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+      Prontuário eletrônico, agendamentos e acompanhamento multidisciplinar integrado
+    </p>
+  </div>
+</section>
 
-  <!-- Funcionalidades -->
-  <section class="content-section">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6" data-aos="fade-right">
-          <h2>Prontuário Eletrônico Completo</h2>
-          <p class="lead">Centralize todos os atendimentos de saúde em um único sistema seguro e acessível.</p>
-          
-          <ul class="feature-list">
-            <li><i class="fas fa-check-circle text-warning me-3"></i>Prontuário digital unificado por paciente</li>
-            <li><i class="fas fa-check-circle text-warning me-3"></i>Registro de consultas e procedimentos</li>
-            <li><i class="fas fa-check-circle text-warning me-3"></i>Prescrições médicas digitais</li>
-            <li><i class="fas fa-check-circle text-warning me-3"></i>Histórico de medicações e alergias</li>
-            <li><i class="fas fa-check-circle text-warning me-3"></i>Exames e laudos anexados</li>
-            <li><i class="fas fa-check-circle text-warning me-3"></i>Evolução multidisciplinar integrada</li>
-          </ul>
-        </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <img src="https://via.placeholder.com/800x500/5a3f72/ffffff?text=Prontu%C3%A1rio+Eletr%C3%B4nico" 
-               class="img-fluid img-shadow" alt="Prontuário Eletrônico">
-        </div>
+<!-- PRONTUÁRIO -->
+<section class="health-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <h2 class="health-section-title">Prontuário Eletrônico Completo</h2>
+        <p class="health-section-text">
+          Centralize todos os atendimentos de saúde em um único sistema seguro.
+        </p>
+
+        <ul class="health-feature-list">
+          <li><i class="fas fa-check-circle"></i> Prontuário digital por paciente</li>
+          <li><i class="fas fa-check-circle"></i> Consultas e procedimentos</li>
+          <li><i class="fas fa-check-circle"></i> Prescrições médicas digitais</li>
+          <li><i class="fas fa-check-circle"></i> Histórico de medicações</li>
+          <li><i class="fas fa-check-circle"></i> Exames e laudos anexados</li>
+          <li><i class="fas fa-check-circle"></i> Evolução multidisciplinar</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-left">
+        <img src="./img/prontuario-eletronico.jpg" class="health-image" alt="Prontuário Eletrônico">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Equipe Multidisciplinar -->
-  <section class="content-section">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6 order-lg-2" data-aos="fade-left">
-          <h2>Gestão da Equipe Multidisciplinar</h2>
-          <p class="lead">Coordene todos os profissionais de saúde em um só lugar.</p>
-          
-          <div class="benefits-grid">
-            <div class="benefit-item">
-              <i class="fas fa-user-md"></i>
-              <h4>Médicos</h4>
-              <p>Consultas, prescrições e laudos</p>
-            </div>
-            <div class="benefit-item">
-              <i class="fas fa-brain"></i>
-              <h4>Psicólogos</h4>
-              <p>Avaliações e acompanhamento</p>
-            </div>
-            <div class="benefit-item">
-              <i class="fas fa-comment-medical"></i>
-              <h4>Fonoaudiólogos</h4>
-              <p>Terapias e evoluções</p>
-            </div>
-            <div class="benefit-item">
-              <i class="fas fa-walking"></i>
-              <h4>Fisioterapeutas</h4>
-              <p>Planos terapêuticos</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 order-lg-1" data-aos="fade-right">
-          <img src="https://via.placeholder.com/800x500/412c54/ffffff?text=Equipe+Multidisciplinar" 
-               class="img-fluid img-shadow" alt="Equipe Multidisciplinar">
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- EQUIPE -->
+<section class="health-section health-section-alt">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+        <h2 class="health-section-title">Equipe Multidisciplinar</h2>
+        <p class="health-section-text">
+          Coordene todos os profissionais em um único sistema.
+        </p>
 
-  <!-- Agendamentos -->
-  <section class="content-section">
-    <div class="container text-center">
-      <h2 class="mb-5" data-aos="fade-up">Sistema de Agendamentos Inteligente</h2>
-      
-      <div class="row g-4">
-        <div class="col-md-4" data-aos="fade-up">
-          <div class="feature-card">
-            <i class="fas fa-calendar-check"></i>
-            <h4>Agenda Integrada</h4>
-            <p>Visualize todos os profissionais e horários disponíveis em tempo real</p>
+        <div class="health-team-grid">
+          <div class="health-team-card">
+            <i class="fas fa-user-md"></i>
+            <h4>Médicos</h4>
+            <p>Consultas e prescrições</p>
           </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-card">
-            <i class="fas fa-bell"></i>
-            <h4>Lembretes Automáticos</h4>
-            <p>Reduza faltas com notificações por WhatsApp e SMS</p>
+          <div class="health-team-card">
+            <i class="fas fa-brain"></i>
+            <h4>Psicólogos</h4>
+            <p>Avaliações clínicas</p>
           </div>
-        </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-card">
-            <i class="fas fa-chart-line"></i>
-            <h4>Relatórios de Produtividade</h4>
-            <p>Acompanhe atendimentos realizados e taxa de ocupação</p>
+          <div class="health-team-card">
+            <i class="fas fa-comment-medical"></i>
+            <h4>Fonoaudiólogos</h4>
+            <p>Terapias e evoluções</p>
+          </div>
+          <div class="health-team-card">
+            <i class="fas fa-walking"></i>
+            <h4>Fisioterapeutas</h4>
+            <p>Planos terapêuticos</p>
           </div>
         </div>
       </div>
+
+      <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+        <img src="./img/eqp-multi.jpeg" class="health-image" alt="Equipe Multidisciplinar">
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA -->
-  <section class="cta-section text-center">
-    <div class="container">
-      <h3 class="mb-4" data-aos="fade-up">Transforme a gestão de saúde da sua APAE</h3>
-      <p data-aos="fade-up" data-aos-delay="100">
-        Veja como o módulo de saúde funciona na prática
-      </p>
-      <a href="https://wa.me/5567981742192?text=Quero%20ver%20o%20m%C3%B3dulo%20de%20sa%C3%BAde%20do%20S%40I" 
-         class="btn btn-warning btn-lg px-5" data-aos="fade-up" data-aos-delay="200">
-         <i class="fab fa-whatsapp me-2"></i> Agendar Demonstração
-      </a>
+<!-- AGENDAMENTOS -->
+<section class="health-section text-center">
+  <div class="container">
+    <h2 class="health-section-title mb-5">Agendamentos Inteligentes</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="health-card">
+          <i class="fas fa-calendar-check"></i>
+          <h4>Agenda Integrada</h4>
+          <p>Horários em tempo real</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="health-card">
+          <i class="fas fa-bell"></i>
+          <h4>Lembretes</h4>
+          <p>WhatsApp e SMS</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="health-card">
+          <i class="fas fa-chart-line"></i>
+          <h4>Relatórios</h4>
+          <p>Produtividade e atendimentos</p>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <div id="footer-placeholder"></div>
+<!-- CTA -->
+<section class="health-cta text-center">
+  <div class="container">
+    <h3 class="cta-title">Transforme a gestão de saúde da sua APAE</h3>
+    <p class="cta-subtitle">Veja o módulo funcionando na prática</p>
+    <a href="https://wa.me/5567981742192" class="btn btn-warning btn-lg">
+      <i class="fab fa-whatsapp me-2"></i> Agendar Demonstração
+    </a>
+  </div>
+</section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({ duration: 800, once: true });</script>
-  <script src="./js/script.js"></script>
+<div id="footer-placeholder"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ once: true });</script>
+<script src="js/main.js"></script>
+
 </body>
 </html>

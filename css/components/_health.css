@@ -1,0 +1,280 @@
+.cta-title{
+    color: white   ;
+}
+.cta-subtitle{
+    color: white   ;
+}
+.health-hero {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    padding: 10rem 1rem 8rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .health-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(255,193,7,0.16) 0%, transparent 55%),
+      radial-gradient(circle at 80% 20%, rgba(255,255,255,0.10) 0%, transparent 65%);
+    opacity: 0.75;
+    animation: gentleBreath 16s ease-in-out infinite;
+    pointer-events: none;
+  }
+  
+  @keyframes gentleBreath {
+    0%, 100%   { transform: scale(1.015); opacity: 0.65; }
+    50%        { transform: scale(1.00);   opacity: 0.90; }
+  }
+  
+  .health-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    color: white;
+  }
+  
+  .health-hero-subtitle {
+    font-size: 1.4rem;
+    max-width: 820px;
+    margin: 0 auto;
+    opacity: 0.95;
+    color: white;
+
+  }
+  
+  /* Seções gerais */
+  .health-section {
+    padding: 6rem 1rem;
+    animation: fadeUp 0.9s ease both;
+  }
+  
+  .health-section-alt {
+    background: linear-gradient(to bottom, var(--light-gray), var(--light));
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Títulos com linha que "desenha" suavemente */
+  .health-section-title {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .health-section-title::after {
+    content: "";
+    display: block;
+    width: 0;
+    max-width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary), var(--primary));
+    border-radius: 4px;
+    margin-top: 0.8rem;
+    animation: drawLine 1.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  }
+  
+  @keyframes drawLine {
+    to { width: 110px; }
+  }
+  
+  .health-section-text {
+    font-size: 1.2rem;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+  
+  /* Lista de features - hover suave */
+  .health-feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+  }
+  
+  .health-feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.15rem;
+    margin-bottom: 1.1rem;
+    transition: all 0.35s ease;
+  }
+  
+  .health-feature-list li:hover {
+    transform: translateX(8px);
+    color: var(--primary);
+  }
+  
+  .health-feature-list i {
+    color: var(--secondary);
+    font-size: 1.45rem;
+    min-width: 24px;
+  }
+  
+  /* Imagens - elevação + zoom sutil + sombra premium */
+  .health-image {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+    transition: all 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform, box-shadow;
+  }
+  
+  .health-image:hover {
+    transform: translateY(-14px) scale(1.028);
+    box-shadow: 0 28px 60px rgba(0,0,0,0.16);
+  }
+  
+  /* Grid de equipe multidisciplinar */
+  .health-team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.6rem;
+    margin-top: 2.5rem;
+  }
+  
+  .health-team-card {
+    background: var(--light);
+    border-radius: var(--radius-lg);
+    padding: 2.2rem 1.6rem;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .health-team-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.14);
+  }
+  
+  .health-team-card i {
+    font-size: 3.2rem;
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+    transition: all 0.4s ease;
+  }
+  
+  .health-team-card:hover i {
+    transform: scale(1.15) translateY(-4px);
+    color: var(--secondary);
+  }
+  
+  .health-team-card h4 {
+    margin-bottom: 0.6rem;
+    color: var(--dark);
+  }
+  
+  /* Cards de agendamentos */
+  .health-card {
+    background: var(--light);
+    padding: 2.6rem 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    height: 100%;
+    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .health-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.14);
+  }
+  
+  .health-card i {
+    font-size: 3.6rem;
+    color: var(--secondary);
+    margin-bottom: 1.2rem;
+    transition: all 0.4s ease;
+  }
+  
+  .health-card:hover i {
+    transform: scale(1.18) translateY(-5px);
+    color: var(--primary);
+  }
+  
+  /* Gradiente sutil no hover dos cards */
+  .health-card::before,
+  .health-team-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,193,7,0.10), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+  
+  .health-card:hover::before,
+  .health-team-card:hover::before {
+    opacity: 1;
+  }
+  
+  /* CTA - Botão com brilho magnético moderno */
+  .health-cta {
+    background: var(--primary);
+    color: white;
+    padding: 7rem 1rem;
+    text-align: center;
+  }
+  
+  .health-cta .btn-warning {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 1.1rem 2.4rem;
+    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 30px rgba(255, 193, 7, 0.35);
+    color: var(--dark);
+  }
+  
+  .health-cta .btn-warning::before {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.45),
+      transparent
+    );
+    transition: left 0.75s ease;
+  }
+  
+  .health-cta .btn-warning:hover::before {
+    left: 160%;
+  }
+  
+  .health-cta .btn-warning:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 50px rgba(255, 193, 7, 0.55);
+    background-color: #ffca2c !important;
+  }
+  
+  /* Responsividade básica (ajuste se precisar) */
+  @media (max-width: 992px) {
+    .health-hero {
+      padding: 8rem 1rem 6rem;
+    }
+    .health-section-title {
+      font-size: 2.4rem;
+    }
+  }
