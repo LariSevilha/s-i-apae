@@ -1,71 +1,130 @@
+/* ===============================
+   NAVBAR - VERSÃO PREMIUM & ATRATIVA 2026
+================================ */
+
 .navbar {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-  transition: all 0.4s ease;
-  padding: 1rem 0;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1.2rem 0;
+  z-index: 1030;
 }
 
 .navbar.scrolled {
-  padding: 0.6rem 0;
-  box-shadow: var(--shadow-md);
-  backdrop-filter: blur(10px);
+  padding: 0.8rem 0;
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.92) 0%, rgba(var(--primary-dark-rgb), 0.92) 100%);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Logo com animação acolhedora */
+.navbar-brand {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .navbar-brand img {
-  transition: transform 0.4s ease;
+  transition: all 0.5s ease;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25));
+}
+
+.navbar-brand:hover {
+  transform: translateY(-3px);
 }
 
 .navbar-brand:hover img {
-  transform: scale(1.06);
+  transform: scale(1.08) rotate(3deg);
+  filter: drop-shadow(0 8px 20px rgba(var(--secondary-rgb), 0.4));
 }
 
+/* Links da navbar - hover magnético e glow */
 .nav-link {
-  color: rgba(255,255,255,0.9) !important;
+  color: rgba(255, 255, 255, 0.92) !important;
   font-weight: 500;
-  padding: 0.6rem 1.1rem !important;
+  font-size: 1.05rem;
+  padding: 0.65rem 1.25rem !important;
   border-radius: var(--radius-md);
-  transition: all 0.3s ease;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2.5px;
+  background: var(--secondary);
+  border-radius: 3px;
+  transform: translateX(-50%);
+  transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  width: 60%;
 }
 
 .nav-link:hover,
 .nav-link.active {
   color: white !important;
-  background: rgba(255,255,255,0.12);
-}
-
-.btn-warning {
-  background-color: var(--secondary);
-  border: none;
-  color: var(--primary-dark);
-  font-weight: 600;
-}
-
-.btn-warning:hover {
-  background-color: var(--secondary-dark);
   transform: translateY(-2px);
-}/* Dropdown no hover - apenas em telas maiores que o ponto de quebra do navbar (lg = 992px) */
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Botão Demonstração WhatsApp - glow + shine effect */
+.btn-whatsapp-demo {
+  background: var(--secondary) !important;
+  color: var(--primary-dark) !important;
+  font-weight: 700;
+  padding: 0.75rem 1.8rem !important;
+  border-radius: 50px !important;
+  box-shadow: 0 8px 30px rgba(var(--secondary-rgb), 0.35);
+  transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.btn-whatsapp-demo::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+  transition: left 0.7s ease;
+}
+
+.btn-whatsapp-demo:hover::before {
+  left: 120%;
+}
+
+.btn-whatsapp-demo:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 16px 50px rgba(var(--secondary-rgb), 0.55);
+  background: #ffca2c !important; /* tom mais vivo no hover */
+}
+
+/* Dropdown moderno com fade + slide */
 @media (min-width: 992px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-
-  /* Remove o gap que causa fechamento rápido ao mover o mouse */
   .dropdown-menu {
-    margin-top: 0;
-  }
-
-  /* Opcional: impede que o caret fique "preso" no estado ativo */
-  .dropdown-toggle:active,
-  .dropdown-toggle:focus {
-    pointer-events: none;
-  }
-
-  /* Opcional: melhora a experiência visual com uma transição suave */
-  .dropdown-menu {
+    background: rgba(20, 30, 60, 0.96); /* fundo escuro semi-transparente */
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+    margin-top: 12px;
+    padding: 0.8rem 0;
     opacity: 0;
-    transform: translateY(8px);
-    transition: all 0.25s ease;
-    display: block;        /* já começa como block, mas invisível */
-    pointer-events: none;  /* evita interação quando invisível */
+    transform: translateY(15px);
+    transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    pointer-events: none;
   }
 
   .dropdown:hover .dropdown-menu {
@@ -73,4 +132,47 @@
     transform: translateY(0);
     pointer-events: auto;
   }
+
+  .dropdown-item {
+    color: rgba(255,255,255,0.9);
+    padding: 0.65rem 1.6rem;
+    transition: all 0.3s ease;
+  }
+
+  .dropdown-item:hover {
+    background: rgba(255,193,7,0.18);
+    color: white;
+    padding-left: 2rem;
+  }
+}
+
+/* Mobile: menu mais clean e botão fixo */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: var(--primary-dark);
+    padding: 1.5rem;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+
+  .nav-link {
+    padding: 1rem 1.2rem !important;
+    font-size: 1.1rem;
+  }
+
+  .btn-whatsapp-demo {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 1rem !important;
+  }
+}
+
+/* Ajuste final para o caret do dropdown (opcional) */
+.dropdown-toggle::after {
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
 }
