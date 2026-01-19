@@ -97,31 +97,4 @@
   transform: translateY(-8px) scale(1.04);
   background: rgba(255,255,255,.18);
 }
-
-/* ===============================
-   MOBILE – cartões limpos
-================================ */
-
-.module-card-mobile {
-  background: rgba(255,255,255,.12);
-  backdrop-filter: blur(8px);
-  border-radius: 14px;
-  padding: 1.2rem;
-  color: #fff;
-  text-align: center;
-  border: 1px solid rgba(255,255,255,.2);
-}
-
-.module-card-mobile i {
-  display: block;
-  font-size: 1.4rem;
-  margin-bottom: .5rem;
-  color: var(--secondary);
-}
-
-/* Ajuste mobile */
-@media(max-width:768px){
-  .hero-title {
-    font-size: 2.5rem;
-  }
-}
+ 

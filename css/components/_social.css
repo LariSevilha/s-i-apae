@@ -98,18 +98,7 @@
     transform: perspective(1200px) rotateY(-4deg) translateY(-12px);
     box-shadow: 0 30px 60px rgba(0,0,0,0.2);
   }
-  
-  /* Responsivo */
-  @media (max-width: 768px) {
-    .social-hero {
-      padding: 7rem 1rem 5rem;
-    }
-  
-    .social-title {
-      font-size: 2.2rem;
-    }
-  }
-  
+   
  /* ======================================
    VÍDEO / GIF — DESTAQUE
 ====================================== */
@@ -130,12 +119,4 @@
   .social-image-lg:hover {
     transform: perspective(1400px) rotateY(-5deg) translateY(-18px);
   }
-  
-  /* Mobile: volta ao normal */
-  @media (max-width: 991px) {
-    .social-image-lg {
-      max-width: 100%;
-      margin-left: 0;
-    }
-  }
-  
+   

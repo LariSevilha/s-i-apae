@@ -137,21 +137,4 @@
     line-height: 1.65;
     margin: 0;
   }
-  
-  /* Responsividade */
-  @media (max-width: 991px) {
-    .process-step {
-      padding: 2.6rem 1.8rem;
-    }
-    
-    .step-icon {
-      width: 70px;
-      height: 70px;
-    }
-    
-    .step-icon i {
-      font-size: 1.7rem;
-    }
-  }
-
-  
+   

@@ -130,20 +130,4 @@
   .module-card:hover .module-btn i {
     transform: translateX(8px);
   }
-  
-  /* Responsividade */
-  @media (max-width: 991px) {
-    .module-card {
-      padding: 2.4rem 1.8rem;
-    }
-    .module-icon-wrapper {
-      width: 80px;
-      height: 80px;
-    }
-    .module-icon-wrapper i {
-      font-size: 2.2rem;
-    }
-  }
-
-
-  
+   

@@ -117,19 +117,4 @@
   line-height: 1.65;
   margin: 0;
 }
-
-/* Responsividade */
-@media (max-width: 991px) {
-  .benefit-card {
-    padding: 2.2rem 1.6rem;
-  }
-  
-  .benefit-icon {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .benefit-icon i {
-    font-size: 2rem;
-  }
-}
+ 
