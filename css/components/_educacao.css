@@ -1,147 +1,134 @@
-/* ===============================
-   HERO – Módulo Educacional
-================================ */
-.edu-hero {
-  position: relative;
-  padding: 8rem 0 6rem;
-  background:var(--primary);
-  overflow: hidden;
+:root {
+  --primary: #6d28d9;
+  --primary-dark: #4c1d95;
+  --secondary: #ffc107;
+  --radius: 18px;
 }
 
-.edu-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("https://www.transparenttextures.com/patterns/cubes.png");
-  opacity: 0.05;
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0f0b16;
+  color: #e5e5e5;
+  overflow-x: hidden;
 }
 
-.edu-hero .container {
-  position: relative;
-  z-index: 2;
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: rgba(15,11,22,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* HERO */
+.edu-hero { 
+  padding: 5rem 1rem 4rem;
+  text-align: center;
+  background: linear-gradient(160deg, #2a1a38, #0f0b16);
 }
 
 .edu-hero-title {
-  font-size: clamp(2.8rem, 5vw, 4.5rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  color: #fff;
 }
 
 .edu-hero-subtitle {
-  max-width: 720px;
-  margin: 1.5rem auto 0;
-  font-size: 1.25rem;
-  opacity: 0.9;
-  color: white;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
 }
 
-
-/* ===============================
-   SEÇÃO PRINCIPAL
-================================ */
-.edu-section {
-  padding: 7rem 0;
-  background: #f9fafb;
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+  transition: transform .4s ease;
 }
 
-.edu-title {
-  font-size: 2.3rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  color: #1e1b4b;
+.glass-card:hover {
+  transform: translateY(-6px);
 }
 
-
-/* ===============================
-   LISTA DE FEATURES
-================================ */
+/* FEATURES */
 .edu-feature-list {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .edu-feature-list li {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.2rem;
   margin-bottom: 1rem;
-  background: white;
-  border-radius: 14px;
   font-size: 1.05rem;
-  font-weight: 500;
-  color: #1f2937;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  transition: 0.35s ease;
 }
 
-.edu-feature-list li i {
-  color: #6d28d9;
-  font-size: 1.2rem;
+.edu-feature-list i {
+  color: var(--secondary);
+  margin-right: .6rem;
 }
 
-.edu-feature-list li:hover {
-  transform: translateX(10px) scale(1.02);
-  box-shadow: 0 20px 50px rgba(109,40,217,0.2);
+/* DASHBOARD */
+.edu-dashboard-container {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.6);
 }
 
-
-/* ===============================
-   IMAGEM DO DASHBOARD
-================================ */
 .edu-dashboard {
   width: 100%;
-  border-radius: 24px;
-  box-shadow: 0 40px 100px rgba(0,0,0,0.25);
-  transition: 0.5s ease;
+  transition: transform .6s ease;
 }
 
-.edu-dashboard:hover {
-  transform: perspective(1200px) rotateY(-6deg) rotateX(3deg) scale(1.03);
+.edu-dashboard-container:hover .edu-dashboard {
+  transform: scale(1.05);
 }
 
-
-/* ===============================
-   CTA FINAL
-================================ */
-.edu-cta {
-  padding: 7rem 0;
-  background: linear-gradient(135deg, #4c1d95, #6d28d9);
-  text-align: center;
+.scan-line {
+  position: absolute;
+  inset: 0;
+  height: 3px;
+  background: linear-gradient(transparent, var(--primary), transparent);
+  animation: scan 6s infinite;
 }
 
-.edu-cta-title {
-  color: white;
-  font-size: 2.6rem;
-  font-weight: 800;
-  margin-bottom: 2.5rem;
-}
-
+/* CTA */
 .edu-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.2rem 3rem;
-  font-size: 1.2rem;
-  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  padding: 1rem 2.5rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: white;
+  color: #fff;
+  font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 20px 60px rgba(34,197,94,0.4);
-  transition: 0.4s ease;
+  box-shadow: 0 20px 50px rgba(109,40,217,.6);
 }
 
-.edu-cta-btn i {
-  font-size: 1.4rem;
+/* ANIMAÇÕES */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: .8s ease;
 }
 
-.edu-cta-btn:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 30px 80px rgba(34,197,94,0.6);
-  color: white;
+[data-animate].show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
- 
+@keyframes scan {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(200%); }
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+  .edu-hero-title { font-size: 4.5rem; }
+  .edu-hero-subtitle { font-size: 1.5rem; }
+}
