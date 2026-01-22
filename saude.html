@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <div id="head-placeholder"></div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>S@I - Gestão de Saúde</title>
 
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/main.css">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="icon" href="img/favicon.png">
 </head>
 <body>
+ 
 
+ <!-- NAVBAR -->
 <div id="navbar-placeholder"></div>
 
 <!-- HERO -->
 <section class="health-hero text-white text-center">
   <div class="container">
     <h1 class="health-hero-title" data-aos="fade-up">Gestão de Saúde</h1>
-    <p class="health-hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+    <p class="health-hero-subtitle" data-aos="fade-up" data-aos-delay="150">
       Prontuário eletrônico, agendamentos e acompanhamento multidisciplinar integrado
     </p>
   </div>
@@ -45,7 +60,7 @@
       </div>
 
       <div class="col-lg-6" data-aos="fade-left">
-        <img src="./img/prontuario-eletronico.jpg" class="health-image" alt="Prontuário Eletrônico">
+        <img src="img/prontuario-eletronico.jpg" class="health-image" alt="Prontuário Eletrônico">
       </div>
     </div>
   </div>
@@ -86,7 +101,7 @@
       </div>
 
       <div class="col-lg-6 order-lg-1" data-aos="fade-right">
-        <img src="./img/eqp-multi.jpeg" class="health-image" alt="Equipe Multidisciplinar">
+        <img src="img/eqp-multi.jpeg" class="health-image" alt="Equipe Multidisciplinar">
       </div>
     </div>
   </div>
@@ -95,24 +110,26 @@
 <!-- AGENDAMENTOS -->
 <section class="health-section text-center">
   <div class="container">
-    <h2 class="health-section-title mb-5">Agendamentos Inteligentes</h2>
+    <h2 class="health-section-title mb-5" data-aos="fade-up">
+      Agendamentos Inteligentes
+    </h2>
 
     <div class="row g-4">
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="zoom-in">
         <div class="health-card">
           <i class="fas fa-calendar-check"></i>
           <h4>Agenda Integrada</h4>
           <p>Horários em tempo real</p>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
         <div class="health-card">
           <i class="fas fa-bell"></i>
           <h4>Lembretes</h4>
           <p>WhatsApp e SMS</p>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
         <div class="health-card">
           <i class="fas fa-chart-line"></i>
           <h4>Relatórios</h4>
@@ -124,7 +141,7 @@
 </section>
 
 <!-- CTA -->
-<section class="health-cta text-center">
+<section class="health-cta">
   <div class="container">
     <h3 class="cta-title">Transforme a gestão de saúde da sua APAE</h3>
     <p class="cta-subtitle">Veja o módulo funcionando na prática</p>
@@ -134,12 +151,12 @@
   </div>
 </section>
 
-<div id="footer-placeholder"></div>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div> 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init({ once: true });</script>
 <script src="js/main.js"></script>
-
 </body>
 </html>
