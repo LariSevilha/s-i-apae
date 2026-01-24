@@ -15,27 +15,53 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
   <!-- CSS principal -->
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/saude.css">
 
   <link rel="icon" href="img/favicon.png">
 </head>
 <body>
- 
 
- <!-- NAVBAR -->
+<!-- NAVBAR -->
 <div id="navbar-placeholder"></div>
 
 <!-- HERO -->
-<section class="health-hero text-white text-center">
+<section class="health-hero">
+  <div class="hero-particles"></div>
+  <div class="hero-grid-bg"></div>
   <div class="container">
-    <h1 class="health-hero-title" data-aos="fade-up">Gestão de Saúde</h1>
-    <p class="health-hero-subtitle" data-aos="fade-up" data-aos-delay="150">
-      Prontuário eletrônico, agendamentos e acompanhamento multidisciplinar integrado
+    <div class="hero-badge" data-animate>
+      <i class="fas fa-heartbeat"></i>
+      <span>Saúde Digital</span>
+    </div>
+    <h1 class="health-hero-title" data-animate>Gestão de Saúde</h1>
+    <p class="health-hero-subtitle" data-animate>
+      Prontuário eletrônico, agendamentos e acompanhamento multidisciplinar integrado em uma plataforma completa
     </p>
+    <div class="hero-stats" data-animate>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Seguro</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Disponível</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <i class="fas fa-users-medical"></i>
+        </div>
+        <div class="stat-number">Multi</div>
+        <div class="stat-label">Disciplinar</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -43,97 +69,178 @@
 <section class="health-section">
   <div class="container">
     <div class="row align-items-center g-5">
-      <div class="col-lg-6" data-aos="fade-right">
+      <div class="col-lg-6" data-animate>
+        <span class="section-label">
+          <i class="fas fa-file-medical"></i>
+          Prontuário
+        </span>
         <h2 class="health-section-title">Prontuário Eletrônico Completo</h2>
         <p class="health-section-text">
-          Centralize todos os atendimentos de saúde em um único sistema seguro.
+          Centralize todos os atendimentos de saúde em um único sistema seguro, acessível e integrado.
         </p>
 
         <ul class="health-feature-list">
-          <li><i class="fas fa-check-circle"></i> Prontuário digital por paciente</li>
-          <li><i class="fas fa-check-circle"></i> Consultas e procedimentos</li>
-          <li><i class="fas fa-check-circle"></i> Prescrições médicas digitais</li>
-          <li><i class="fas fa-check-circle"></i> Histórico de medicações</li>
-          <li><i class="fas fa-check-circle"></i> Exames e laudos anexados</li>
-          <li><i class="fas fa-check-circle"></i> Evolução multidisciplinar</li>
+          <li data-animate>
+            <div class="feature-bullet">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-content">
+              <strong>Prontuário digital por paciente</strong>
+              <span>Histórico completo e organizado</span>
+            </div>
+          </li>
+          <li data-animate>
+            <div class="feature-bullet">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-content">
+              <strong>Consultas e procedimentos</strong>
+              <span>Registro detalhado de atendimentos</span>
+            </div>
+          </li>
+          <li data-animate>
+            <div class="feature-bullet">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-content">
+              <strong>Prescrições médicas digitais</strong>
+              <span>Geração automática e segura</span>
+            </div>
+          </li>
+          <li data-animate>
+            <div class="feature-bullet">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-content">
+              <strong>Histórico de medicações</strong>
+              <span>Controle completo de tratamentos</span>
+            </div>
+          </li>
+          <li data-animate>
+            <div class="feature-bullet">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="feature-content">
+              <strong>Exames e laudos anexados</strong>
+              <span>Documentos centralizados</span>
+            </div>
+          </li>
         </ul>
       </div>
 
-      <div class="col-lg-6" data-aos="fade-left">
-        <img src="img/prontuario-eletronico.jpg" class="health-image" alt="Prontuário Eletrônico">
+      <div class="col-lg-6" data-animate>
+        <div class="image-wrapper">
+          <div class="image-glow"></div>
+          <img src="img/prontuario-eletronico.jpg" class="health-image" alt="Prontuário Eletrônico">
+          <div class="image-overlay"></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- EQUIPE -->
-<section class="health-section health-section-alt">
+<section class="health-section health-section-dark">
   <div class="container">
     <div class="row align-items-center g-5">
-      <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+      <div class="col-lg-6 order-lg-2" data-animate>
+        <span class="section-label">
+          <i class="fas fa-user-friends"></i>
+          Equipe
+        </span>
         <h2 class="health-section-title">Equipe Multidisciplinar</h2>
         <p class="health-section-text">
-          Coordene todos os profissionais em um único sistema.
+          Coordene todos os profissionais em um único sistema integrado e eficiente.
         </p>
 
         <div class="health-team-grid">
-          <div class="health-team-card">
-            <i class="fas fa-user-md"></i>
+          <div class="health-team-card" data-animate>
+            <div class="team-icon">
+              <i class="fas fa-user-md"></i>
+            </div>
             <h4>Médicos</h4>
             <p>Consultas e prescrições</p>
+            <div class="team-arrow">→</div>
           </div>
-          <div class="health-team-card">
-            <i class="fas fa-brain"></i>
+          <div class="health-team-card" data-animate>
+            <div class="team-icon">
+              <i class="fas fa-brain"></i>
+            </div>
             <h4>Psicólogos</h4>
             <p>Avaliações clínicas</p>
+            <div class="team-arrow">→</div>
           </div>
-          <div class="health-team-card">
-            <i class="fas fa-comment-medical"></i>
+          <div class="health-team-card" data-animate>
+            <div class="team-icon">
+              <i class="fas fa-comment-medical"></i>
+            </div>
             <h4>Fonoaudiólogos</h4>
             <p>Terapias e evoluções</p>
+            <div class="team-arrow">→</div>
           </div>
-          <div class="health-team-card">
-            <i class="fas fa-walking"></i>
+          <div class="health-team-card" data-animate>
+            <div class="team-icon">
+              <i class="fas fa-walking"></i>
+            </div>
             <h4>Fisioterapeutas</h4>
             <p>Planos terapêuticos</p>
+            <div class="team-arrow">→</div>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-6 order-lg-1" data-aos="fade-right">
-        <img src="img/eqp-multi.jpeg" class="health-image" alt="Equipe Multidisciplinar">
+      <div class="col-lg-6 order-lg-1" data-animate>
+        <div class="image-wrapper">
+          <div class="image-glow"></div>
+          <img src="img/eqp-multi.jpeg" class="health-image" alt="Equipe Multidisciplinar">
+          <div class="image-overlay"></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- AGENDAMENTOS -->
-<section class="health-section text-center">
+<section class="health-section">
   <div class="container">
-    <h2 class="health-section-title mb-5" data-aos="fade-up">
-      Agendamentos Inteligentes
-    </h2>
+    <div class="text-center mb-5">
+      <h2 class="health-section-title" data-animate style="display: inline-block;">
+        Agendamentos Inteligentes
+      </h2>
+      <p class="health-section-text mx-auto" data-animate style="max-width: 600px;">
+        Sistema completo de gestão de agendas para toda a equipe de saúde
+      </p>
+    </div>
 
     <div class="row g-4">
-      <div class="col-md-4" data-aos="zoom-in">
+      <div class="col-md-4" data-animate>
         <div class="health-card">
-          <i class="fas fa-calendar-check"></i>
+          <div class="card-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
           <h4>Agenda Integrada</h4>
-          <p>Horários em tempo real</p>
+          <p>Horários sincronizados em tempo real para todos os profissionais</p>
+          <div class="card-shine"></div>
         </div>
       </div>
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-md-4" data-animate>
         <div class="health-card">
-          <i class="fas fa-bell"></i>
-          <h4>Lembretes</h4>
-          <p>WhatsApp e SMS</p>
+          <div class="card-icon">
+            <i class="fas fa-bell"></i>
+          </div>
+          <h4>Lembretes Automáticos</h4>
+          <p>Notificações via WhatsApp, SMS e e-mail</p>
+          <div class="card-shine"></div>
         </div>
       </div>
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+      <div class="col-md-4" data-animate>
         <div class="health-card">
-          <i class="fas fa-chart-line"></i>
-          <h4>Relatórios</h4>
-          <p>Produtividade e atendimentos</p>
+          <div class="card-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h4>Relatórios Completos</h4>
+          <p>Análise de produtividade e atendimentos realizados</p>
+          <div class="card-shine"></div>
         </div>
       </div>
     </div>
@@ -142,21 +249,53 @@
 
 <!-- CTA -->
 <section class="health-cta">
+  <div class="cta-particles"></div>
   <div class="container">
-    <h3 class="cta-title">Transforme a gestão de saúde da sua APAE</h3>
-    <p class="cta-subtitle">Veja o módulo funcionando na prática</p>
-    <a href="https://wa.me/5567981742192" class="btn btn-warning btn-lg">
-      <i class="fab fa-whatsapp me-2"></i> Agendar Demonstração
-    </a>
+    <div class="cta-content">
+      <h3 class="cta-title" data-animate>Transforme a gestão de saúde da sua APAE</h3>
+      <p class="cta-subtitle" data-animate>Veja o módulo funcionando na prática e descubra como otimizar seus processos</p>
+      <a href="https://wa.me/5567981742192" class="btn-cta" data-animate>
+        <span class="btn-text">
+          <i class="fab fa-whatsapp"></i>
+          Agendar Demonstração
+        </span>
+        <span class="btn-glow"></span>
+      </a>
+    </div>
   </div>
 </section>
 
-
-  <!-- FOOTER -->
-  <div id="footer-placeholder"></div> 
+<!-- FOOTER -->
+<div id="footer-placeholder"></div> 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+  // Animação de scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, index * 100);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('[data-animate]').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)';
+    observer.observe(el);
+  });
+</script>
+
 </body>
 </html>

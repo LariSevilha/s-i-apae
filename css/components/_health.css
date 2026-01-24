@@ -1,103 +1,236 @@
-/* saude */
-.cta-title{
-    color: white   ;
-}
-.cta-subtitle{
-    color: white   ;
-}
-.health-hero {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    padding: 10rem 1rem 8rem;
+/* ==========================================================================
+   GESTÃO DE SAÚDE - CSS PREMIUM
+   ========================================================================== */
+
+   :root {
+    --primary: #6d28d9;
+    --primary-dark: #0f0b16;
+    --secondary: #fbbf24;
+    --accent: #10b981;
+  }
+  
+  /* ==========================================================================
+     HERO - Premium e Cinematográfico
+     ========================================================================== */
+  .health-hero {
+    padding: 8rem 1rem 5rem;
+    text-align: center;
+    background: linear-gradient(145deg, #2a1a38 0%, #0f0b16 100%);
     position: relative;
     overflow: hidden;
   }
   
-  .health-hero::after {
-    content: "";
+  .health-hero::before {
+    content: '';
     position: absolute;
     inset: 0;
-    background: 
-      radial-gradient(circle at 20% 80%, rgba(255,193,7,0.16) 0%, transparent 55%),
-      radial-gradient(circle at 80% 20%, rgba(255,255,255,0.10) 0%, transparent 65%);
-    opacity: 0.75;
-    animation: gentleBreath 16s ease-in-out infinite;
+    background: radial-gradient(circle at 70% 30%, rgba(251,191,36,0.1) 0%, transparent 60%);
     pointer-events: none;
   }
   
-  @keyframes gentleBreath {
-    0%, 100%   { transform: scale(1.015); opacity: 0.65; }
-    50%        { transform: scale(1.00);   opacity: 0.90; }
+  .hero-particles {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(251,191,36,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(16,185,129,0.06) 0%, transparent 50%);
+    animation: particleFloat 20s ease-in-out infinite;
+  }
+  
+  @keyframes particleFloat {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-30px) scale(1.05); }
+  }
+  
+  .hero-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(251,191,36,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(251,191,36,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 30s linear infinite;
+    opacity: 0.5;
+  }
+  
+  @keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+  }
+  
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.4rem;
+    background: rgba(251,191,36,0.12);
+    border: 1px solid rgba(251,191,36,0.3);
+    border-radius: 50px;
+    color: #fbbf24;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    animation: badgePulse 3s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(251,191,36,0.2);
+  }
+  
+  @keyframes badgePulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(251,191,36,0.2); }
+    50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(251,191,36,0.4); }
   }
   
   .health-hero-title {
-    font-family: var(--font-heading);
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-family: 'Poppins', sans-serif;
     font-weight: 800;
-    color: white;
+    font-size: clamp(2.6rem, 6.5vw, 5rem);
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
   }
   
   .health-hero-subtitle {
-    font-size: 1.4rem;
-    max-width: 820px;
+    font-size: clamp(1.15rem, 2.8vw, 1.6rem);
+    color: rgba(255,255,255,0.92);
+    max-width: 680px;
     margin: 0 auto;
-    opacity: 0.95;
-    color: white;
-
+    font-weight: 400;
+    line-height: 1.45;
   }
   
-  /* Seções gerais */
-  .health-section {
-    padding: 6rem 1rem;
-    animation: fadeUp 0.9s ease both;
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
   }
   
-  .health-section-alt {
-    background: linear-gradient(to bottom, var(--light-gray), var(--light));
-  }
-  
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Títulos com linha que "desenha" suavemente */
-  .health-section-title {
-    font-family: var(--font-heading);
-    font-size: 2.8rem;
-    color: var(--primary);
-    margin-bottom: 1.5rem;
+  .stat-item {
+    text-align: center;
     position: relative;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(251,191,36,0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    min-width: 140px;
+  }
+  
+  .stat-item:hover {
+    transform: translateY(-10px);
+    background: rgba(251,191,36,0.08);
+    border-color: rgba(251,191,36,0.4);
+    box-shadow: 0 20px 40px rgba(251,191,36,0.2);
+  }
+  
+  .stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #fbbf24;
+    animation: iconFloat 3s ease-in-out infinite;
+  }
+  
+  @keyframes iconFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.3rem;
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  /* ==========================================================================
+     SECTIONS - Modernas e Dinâmicas
+     ========================================================================== */
+  .health-section {
+    padding: 5rem 1rem;
+    background: var(--primary-dark);
+    position: relative;
+  }
+  
+  .health-section-dark {
+    background: linear-gradient(180deg, #0f0b16 0%, #1a0f2e 50%, #0f0b16 100%);
+  }
+  
+  .health-section-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(251,191,36,0.3), transparent);
+  }
+  
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: rgba(251,191,36,0.1);
+    border: 1px solid rgba(251,191,36,0.25);
+    border-radius: 30px;
+    color: #fbbf24;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+  
+  .health-section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: #ffffff;
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    position: relative;
+    display: inline-block;
   }
   
   .health-section-title::after {
     content: "";
     display: block;
     width: 0;
-    max-width: 120px;
     height: 4px;
-    background: linear-gradient(90deg, var(--secondary), var(--primary));
+    background: linear-gradient(90deg, #fbbf24, #10b981);
     border-radius: 4px;
-    margin-top: 0.8rem;
-    animation: drawLine 1.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    margin-top: 1rem;
+    animation: lineGrow 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
   
-  @keyframes drawLine {
-    to { width: 110px; }
+  @keyframes lineGrow {
+    to { width: 100%; }
   }
   
   .health-section-text {
-    font-size: 1.2rem;
-    color: var(--gray);
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.75);
     line-height: 1.7;
+    margin-bottom: 2rem;
   }
   
-  /* Lista de features - hover suave */
+  /* ==========================================================================
+     FEATURE LIST - Premium
+     ========================================================================== */
   .health-feature-list {
     list-style: none;
     padding: 0;
@@ -106,167 +239,472 @@
   
   .health-feature-list li {
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 1.15rem;
-    margin-bottom: 1.1rem;
-    transition: all 0.35s ease;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .health-feature-list li::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(251,191,36,0.08), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
   
   .health-feature-list li:hover {
-    transform: translateX(8px);
-    color: var(--primary);
+    transform: translateX(10px);
+    background: rgba(251,191,36,0.05);
   }
   
-  .health-feature-list i {
-    color: var(--secondary);
-    font-size: 1.45rem;
-    min-width: 24px;
+  .health-feature-list li:hover::before {
+    opacity: 1;
   }
   
-  /* Imagens - elevação + zoom sutil + sombra premium */
+  .feature-bullet {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background: linear-gradient(135deg, rgba(251,191,36,0.2), rgba(16,185,129,0.15));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .health-feature-list li:hover .feature-bullet {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, rgba(251,191,36,0.35), rgba(16,185,129,0.25));
+    box-shadow: 0 8px 20px rgba(251,191,36,0.3);
+  }
+  
+  .feature-bullet i {
+    color: #fbbf24;
+    font-size: 1.1rem;
+  }
+  
+  .feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .feature-content strong {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  
+  .feature-content span {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+  }
+  
+  /* ==========================================================================
+     IMAGES - Premium com efeitos
+     ========================================================================== */
+  .image-wrapper {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  
+  .image-glow {
+    position: absolute;
+    inset: -50%;
+    background: radial-gradient(circle, rgba(251,191,36,0.15) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    z-index: 0;
+    animation: glowPulse 4s ease-in-out infinite;
+  }
+  
+  @keyframes glowPulse {
+    0%, 100% { transform: scale(1); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 0.3; }
+  }
+  
+  .image-wrapper:hover .image-glow {
+    opacity: 1;
+    animation: glowPulse 2s ease-in-out infinite;
+  }
+  
   .health-image {
     width: 100%;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 12px 32px rgba(0,0,0,0.10);
-    transition: all 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
-    will-change: transform, box-shadow;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 1;
   }
   
-  .health-image:hover {
-    transform: translateY(-14px) scale(1.028);
-    box-shadow: 0 28px 60px rgba(0,0,0,0.16);
+  .image-wrapper:hover .health-image {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 30px 80px rgba(251,191,36,0.3);
   }
   
-  /* Grid de equipe multidisciplinar */
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  /* ==========================================================================
+     TEAM CARDS - Modernos
+     ========================================================================== */
   .health-team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
     margin-top: 2.5rem;
   }
   
   .health-team-card {
-    background: var(--light);
-    border-radius: var(--radius-lg);
-    padding: 2.2rem 1.6rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     overflow: hidden;
+  }
+  
+  .health-team-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(251,191,36,0.08), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
   
   .health-team-card:hover {
     transform: translateY(-12px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.14);
+    box-shadow: 0 25px 60px rgba(251,191,36,0.2);
+    border-color: rgba(251,191,36,0.3);
   }
   
-  .health-team-card i {
-    font-size: 3.2rem;
-    color: var(--primary);
-    margin-bottom: 1.2rem;
-    transition: all 0.4s ease;
-  }
-  
-  .health-team-card:hover i {
-    transform: scale(1.15) translateY(-4px);
-    color: var(--secondary);
-  }
-  
-  .health-team-card h4 {
-    margin-bottom: 0.6rem;
-    color: var(--dark);
-  }
-  
-  /* Cards de agendamentos */
-  .health-card {
-    background: var(--light);
-    padding: 2.6rem 2rem;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    height: 100%;
-    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .health-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.14);
-  }
-  
-  .health-card i {
-    font-size: 3.6rem;
-    color: var(--secondary);
-    margin-bottom: 1.2rem;
-    transition: all 0.4s ease;
-  }
-  
-  .health-card:hover i {
-    transform: scale(1.18) translateY(-5px);
-    color: var(--primary);
-  }
-  
-  /* Gradiente sutil no hover dos cards */
-  .health-card::before,
-  .health-team-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(255,193,7,0.10), transparent 70%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
-  }
-  
-  .health-card:hover::before,
   .health-team-card:hover::before {
     opacity: 1;
   }
   
-  /* CTA - Botão com brilho magnético moderno */
-  .health-cta {
-    background: var(--primary);
-    color: white;
-    padding: 7rem 1rem;
+  .team-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(251,191,36,0.2), rgba(16,185,129,0.15));
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+    font-size: 2rem;
+    color: #fbbf24;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .health-team-card:hover .team-icon {
+    transform: scale(1.15) rotate(10deg);
+    background: linear-gradient(135deg, rgba(251,191,36,0.35), rgba(16,185,129,0.25));
+    box-shadow: 0 10px 30px rgba(251,191,36,0.4);
+  }
+  
+  .health-team-card h4 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .health-team-card p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .team-arrow {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: rgba(251,191,36,0.3);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.4s ease;
+    z-index: 1;
+  }
+  
+  .health-team-card:hover .team-arrow {
+    opacity: 1;
+    transform: translateX(0);
+    color: rgba(251,191,36,0.8);
+  }
+  
+  /* ==========================================================================
+     AGENDAMENTOS CARDS - Premium
+     ========================================================================== */
+  .health-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
     text-align: center;
   }
   
-  .health-cta .btn-warning {
-    position: relative;
-    overflow: hidden;
-    border: none;
-    font-weight: 600;
-    font-size: 1.25rem;
-    padding: 1.1rem 2.4rem;
-    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 8px 30px rgba(255, 193, 7, 0.35);
-    color: var(--dark);
+  .health-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(251,191,36,0.08), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
   
-  .health-cta .btn-warning::before {
-    content: "";
+  .health-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 60px rgba(251,191,36,0.2);
+    border-color: rgba(251,191,36,0.3);
+  }
+  
+  .health-card:hover::before {
+    opacity: 1;
+  }
+  
+  .card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(251,191,36,0.2), rgba(16,185,129,0.15));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2.5rem;
+    color: #fbbf24;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .health-card:hover .card-icon {
+    transform: scale(1.15) rotate(5deg);
+    background: linear-gradient(135deg, rgba(251,191,36,0.35), rgba(16,185,129,0.25));
+    box-shadow: 0 15px 40px rgba(251,191,36,0.4);
+  }
+  
+  .health-card h4 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .health-card p {
+    color: rgba(255,255,255,0.7);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .card-shine {
     position: absolute;
-    top: 0; left: -100%;
-    width: 60%;
-    height: 100%;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
     background: linear-gradient(
-      90deg,
+      45deg,
       transparent,
-      rgba(255,255,255,0.45),
+      rgba(255,255,255,0.1),
       transparent
     );
-    transition: left 0.75s ease;
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    transition: transform 0.8s ease;
   }
   
-  .health-cta .btn-warning:hover::before {
-    left: 160%;
+  .health-card:hover .card-shine {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
   }
   
-  .health-cta .btn-warning:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 50px rgba(255, 193, 7, 0.55);
-    background-color: #ffca2c !important;
+  /* ==========================================================================
+     CTA - Premium e Impactante
+     ========================================================================== */
+  .health-cta {
+    background: linear-gradient(145deg, #2a1a38 0%, #0f0b16 100%);
+    padding: 7rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
   }
- 
+  
+  .health-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(251,191,36,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  
+  .cta-particles {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 30% 40%, rgba(251,191,36,0.1) 0%, transparent 50%),
+      radial-gradient(circle at 70% 60%, rgba(16,185,129,0.08) 0%, transparent 50%);
+    animation: particleFloat 25s ease-in-out infinite;
+  }
+  
+  .cta-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .cta-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+  
+  .cta-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.3rem 3rem;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(251,191,36,0.4);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 2px solid rgba(251,191,36,0.5);
+  }
+  
+  .btn-cta:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 25px 70px rgba(251,191,36,0.6);
+    color: #000;
+  }
+  
+  .btn-text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .btn-glow {
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.5), transparent);
+    opacity: 0;
+    animation: btnGlowMove 3s linear infinite;
+  }
+  
+  @keyframes btnGlowMove {
+    0% { transform: translateX(-100%) rotate(45deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(100%) rotate(45deg); opacity: 0; }
+  }
+  
+  .btn-cta:hover .btn-glow {
+    animation: btnGlowMove 1.5s linear infinite;
+  }
+  
+  /* ==========================================================================
+     RESPONSIVE
+     ========================================================================== */
+  @media (max-width: 768px) {
+    .health-hero {
+      padding: 6rem 1rem 4rem;
+    }
+  
+    .hero-stats {
+      gap: 1.5rem;
+    }
+  
+    .stat-item {
+      min-width: 120px;
+    }
+  
+    .health-section {
+      padding: 4rem 1rem;
+    }
+  
+    .health-team-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .team-arrow {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .health-hero-title {
+      font-size: 2.2rem;
+    }
+  
+    .health-section-title {
+      font-size: 1.8rem;
+    }
+  
+    .cta-title {
+      font-size: 1.8rem;
+    }
+  
+    .btn-cta {
+      padding: 1.1rem 2rem;
+      font-size: 1.1rem;
+    }
+  }
