@@ -2,68 +2,206 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>S@I - Módulo Social</title>
 
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/social.css">
 </head>
 <body>
-  <div id="navbar-placeholder"></div>
+
+<div id="navbar-placeholder"></div>
 
 <!-- HERO -->
-<header class="social-hero text-center text-white">
+<header class="social-hero">
+  <div class="hero-particles"></div>
+  <div class="hero-grid-bg"></div>
   <div class="container">
-    <h1 class="social-hero-title" data-aos="fade-up">Módulo Social</h1>
-    <p class="social-hero-subtitle" data-aos="fade-up" data-aos-delay="100">
-      Gestão completa de programas sociais, famílias e acompanhamentos
+    <div class="hero-badge" data-animate>
+      <i class="fas fa-hands-helping"></i>
+      <span>Assistência Social</span>
+    </div>
+    <h1 class="social-hero-title" data-animate>Módulo Social</h1>
+    <p class="social-hero-subtitle" data-animate>
+      Gestão completa de programas sociais, famílias e acompanhamentos integrados
     </p>
+    <div class="hero-stats" data-animate>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-number">360°</div>
+        <div class="stat-label">Visão Familiar</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
+        <div class="stat-number">Auto</div>
+        <div class="stat-label">Relatórios</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+        <div class="stat-number">Real-time</div>
+        <div class="stat-label">Acompanhamento</div>
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- CONTEÚDO -->
+<!-- CONTEÚDO PRINCIPAL --> 
 <main class="social-section">
   <div class="container">
     <div class="row align-items-center g-5">
-      
-      <div class="col-lg-5" data-aos="fade-right">
 
+      <!-- Texto em cima (em todas as telas) -->
+      <div class="col-lg-12 mb-5 mb-lg-0" data-animate>
+        <span class="section-label">
+          <i class="fas fa-heart"></i> Assistência
+        </span>
         <h2 class="social-title">Assistência Social Integrada</h2>
         <p class="social-text">
-          
           Centralize informações sociais, acompanhe famílias, benefícios,
           visitas técnicas e relatórios exigidos pelos órgãos reguladores.
         </p>
 
         <ul class="social-list">
-          <li>Cadastro social unificado</li>
-          <li>Registro de visitas domiciliares</li>
-          <li>Acompanhamento familiar contínuo</li>
-          <li>Relatórios sociais automatizados</li>
+          <li data-animate>
+            <div class="list-bullet"><i class="fas fa-check"></i></div>
+            <div class="list-content">
+              <strong>Cadastro social unificado</strong>
+              <span>Todas as informações em um só lugar</span>
+            </div>
+          </li>
+          <li data-animate>
+            <div class="list-bullet"><i class="fas fa-check"></i></div>
+            <div class="list-content">
+              <strong>Registro de visitas domiciliares</strong>
+              <span>Histórico completo e organizado</span>
+            </div>
+          </li>
+          <li data-animate>
+            <div class="list-bullet"><i class="fas fa-check"></i></div>
+            <div class="list-content">
+              <strong>Acompanhamento familiar contínuo</strong>
+              <span>Evolução e desenvolvimento</span>
+            </div>
+          </li>
+          <li data-animate>
+            <div class="list-bullet"><i class="fas fa-check"></i></div>
+            <div class="list-content">
+              <strong>Relatórios sociais automatizados</strong>
+              <span>Geração rápida e padronizada</span>
+            </div>
+          </li>
         </ul>
       </div>
 
-      <div class="col-lg-7" data-aos="fade-left">
-        <img 
-          src="./gifs/gestao-pedagogica/assistencia-social.gif"
-          alt="Dashboard Assistência Social"
-          class="social-image social-image-lg"
-        >
+      <!-- Dashboard / GIF grande embaixo -->
+      <div class="col-lg-12" data-animate>
+        <div class="dashboard-wrapper">
+          <div class="dashboard-inner">
+            <img 
+              src="./gifs/gestao-pedagogica/assistencia-social.gif"
+              alt="Dashboard Assistência Social – S@I Módulo Social"
+              class="social-image"
+            >
+          </div>
+        </div>
       </div>
-      
 
     </div>
   </div>
 </main>
 
+<!-- RECURSOS -->
+<section class="social-features">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-label" data-animate>
+        <i class="fas fa-star"></i> Recursos
+      </span>
+      <h2 class="section-title" data-animate>Funcionalidades completas</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4" data-animate>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-clipboard-list"></i></div>
+          <h4>Gestão de Benefícios</h4>
+          <p>Controle completo de programas sociais e benefícios</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-animate>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-home"></i></div>
+          <h4>Visitas Técnicas</h4>
+          <p>Agendamento e registro de visitas domiciliares</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-animate>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+          <h4>Relatórios Automáticos</h4>
+          <p>Documentação completa para órgãos reguladores</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="social-cta">
+  <div class="cta-particles"></div>
+  <div class="container">
+    <div class="cta-content">
+      <h3 class="cta-title" data-animate>Transforme a assistência social da sua APAE</h3>
+      <p class="cta-subtitle" data-animate>Conheça todas as funcionalidades do módulo social</p>
+      <a href="https://wa.me/5567981742192" class="btn-cta" data-animate>
+        <span class="btn-text">
+          <i class="fab fa-whatsapp"></i> Falar com Especialista
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <div id="footer-placeholder"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init({ once: true });</script>
 <script src="js/main.js"></script>
 
+<script>
+  // Animação de scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }, index * 100);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('[data-animate]').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)';
+    observer.observe(el);
+  });
+</script>
 
 </body>
 </html>
