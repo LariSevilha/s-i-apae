@@ -21,8 +21,10 @@
   --shadow-sm: 0 2px 10px rgba(0,0,0,0.08);
   --shadow-md: 0 8px 30px rgba(0,0,0,0.12);
   
-  --radius-md: 0.75rem;
-  --radius-lg: 1.25rem;
+  --radius-md: 0.75rem; 
+  --radius: 24px;          
+  --radius-lg: 32px;
 }
 
   
+/* 0f0b16 */
