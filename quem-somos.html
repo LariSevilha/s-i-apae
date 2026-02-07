@@ -1,273 +1,400 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quem Somos - S@I para APAEs</title>
-  <meta name="description" content="Conheça o S@I: sistema completo de gestão para APAEs, desenvolvido para apoiar decisões, planejamento e avaliação institucional.">
+  <meta name="description" content="Conheça o S@I: sistema completo de gestão para APAEs, desenvolvido para apoiar decisões, planejamento e avaliação institucional." />
 
-  <!-- Bootstrap -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> 
+  
+  <!-- Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <!-- CSS Principal -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+  <div class="ambient"></div>
 
   <!-- NAVBAR -->
   <div id="navbar-placeholder"></div>
 
-  <!-- HERO INTERNO -->
-  <section class="page-hero">
-    <div class="container text-center" data-aos="fade-up">
-      <h1 class="page-hero-title">
-        Transformando vidas por meio da gestão inteligente<br>
-        <span class="hero-highlight">das APAEs</span>
-      </h1>
-      
-      <p class="page-hero-subtitle">
-        O S@I é a solução completa que empodera as APAEs com ferramentas modernas de 
-        autoavaliação, planejamento estratégico e decisões baseadas em dados reais.
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container heroGrid">
+      <div>
+        <div class="kicker">
+          <span class="dot"></span>
+          Gestão inteligente para APAEs
+        </div>
+
+        <h1>
+          Tecnologia que transforma <span class="accent">dados</span> em
+          decisões — e decisões em <span class="accent">impacto real</span>.
+        </h1>
+
+        <p class="lead">
+          O S@I foi criado para fortalecer a gestão institucional com autoavaliação, planejamento
+          estratégico e acompanhamento contínuo — tudo em um ecossistema simples, seguro e orientado a resultados.
+        </p>
+
+        <div class="pillRow">
+          <div class="pill"><i class="fa-solid fa-chart-simple"></i> Indicadores claros</div>
+          <div class="pill"><i class="fa-solid fa-bullseye"></i> Metas acompanhadas</div>
+          <div class="pill"><i class="fa-solid fa-shield-halved"></i> Segurança e acesso</div>
+          <div class="pill"><i class="fa-solid fa-handshake"></i> Suporte humano</div>
+        </div>
+      </div>
+
+      <!-- Portal -->
+      <div class="portalWrap" id="tiltArea">
+        <div class="portal" id="portal">
+          
+
+          <div class="portalInner">
+            <div class="miniTop">
+              <div class="brandMark">
+                <div class="badge">S@I</div>
+                <div>Portal Institucional</div>
+              </div>
+              <div class="status"><i class="fa-solid fa-lock me-2"></i>Acesso seguro</div>
+            </div>
+
+            <div class="portalBody">
+              <div class="sparkLine"></div>
+
+              <div class="ghostCard">
+                <div class="ghostTitle">Diagnóstico → Plano → Ação</div>
+                <div class="ghostText">
+                  Centralize informações, acompanhe metas e gere relatórios que sustentam decisões com transparência.
+                </div>
+              </div>
+
+              <div class="ghostCard">
+                <div class="ghostTitle">Rotina mais simples</div>
+                <div class="ghostText">
+                  Menos planilhas dispersas. Mais organização e consistência para toda a instituição.
+                </div>
+              </div>
+            </div>
+
+            <div class="portalFooter">
+              <button class="ctaBtn" onclick="window.location.href='https://wa.me/5567981742192'">
+                <i class="fa-brands fa-whatsapp"></i> Agendar demonstração
+              </button>
+              <button class="ghostBtn" onclick="document.getElementById('sec-about').scrollIntoView({behavior:'smooth'})">
+                <i class="fa-solid fa-arrow-down"></i> Conhecer o S@I
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ABOUT / BENTO -->
+  <section class="section" id="sec-about">
+    <div class="container">
+      <h2 class="sectionTitle">Muito mais que um sistema: um parceiro da sua instituição</h2>
+      <p class="sectionSub">
+        O S@I nasceu a partir das necessidades reais das APAEs, para apoiar autoavaliação, planejamento e decisões baseadas em dados.
       </p>
+
+      <div class="bento">
+        <div class="tile tileBig">
+          <div class="tileTop">
+            <div class="tileLabel">
+              <span class="miniChip" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 7 3 12l5 5 1.4-1.4L5.8 12l3.6-3.6L8 7zm8 0-1.4 1.4 3.6 3.6-3.6 3.6L16 17l5-5-5-5zM10 20h2l2-16h-2l-2 16z"/></svg>
+              </span>
+              Tecnologia com propósito
+            </div>
+            <span class="pill"><i class="fa-solid fa-circle-check"></i> Metodologia prática</span>
+          </div>
+
+          <p class="tileText">
+            Desenvolvido para transformar diagnósticos em ações concretas que fortalecem a gestão institucional
+            e ampliam a qualidade do atendimento e dos processos pedagógicos.
+          </p>
+
+          <div class="tileRow" style="margin-top: 10px;">
+            <div class="tile">
+              <div class="tileLabel">
+                <span class="miniChip" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 5h-2v6l5 3 1-1.7-4-2.3V7z"/></svg>
+                </span>
+                Tempo a favor
+              </div>
+              <p class="tileText">Menos retrabalho e mais consistência no acompanhamento institucional.</p>
+            </div>
+
+            <div class="tile">
+              <div class="tileLabel">
+                <span class="miniChip" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 3 1 8l11 5 9-4.1V17h2V8L12 3zm-6 9.2V16c0 2.2 3.1 4 6 4s6-1.8 6-4v-3.8l-6 2.8-6-2.8z"/></svg>
+                </span>
+                Educação especial
+              </div>
+              <p class="tileText">Focado na realidade das rotinas, demandas e registros das APAEs.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile tileBig">
+          <div class="tileTop">
+            <div class="tileLabel">
+              <span class="miniChip" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-7.3-4.7-9.6-9C.6 8.5 2.1 5.7 5 5.1c1.7-.4 3.4.3 4.5 1.6C10.6 5.4 12.3 4.7 14 5.1c2.9.6 4.4 3.4 2.6 6.9-2.3 4.3-9.6 9-9.6 9z"/></svg>
+              </span>
+              Compromisso contínuo
+            </div>
+          </div>
+
+          <p class="tileText">
+            Acompanhamos implantação, uso e evolução do sistema. O suporte não é "apenas técnico":
+            é orientado a resultados e à tomada de decisão.
+          </p>
+
+          <div class="ghostCard" style="margin-top: 10px;">
+            <div class="ghostTitle">O que a equipe sente na prática</div>
+            <div class="ghostText">"Ficou mais fácil visualizar o que está pendente, o que está em andamento e o que precisa de atenção."</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- QUEM SOMOS -->
-  <section class="about-section">
+  <!-- PRISMS: missão/visão/valores -->
+  <section class="section">
     <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6" data-aos="fade-right">
-          <h2 class="about-title mb-4">
-            Muito mais que um sistema:<br>
-            um parceiro da sua instituição
-          </h2>
-          <p class="about-lead">
-            O S@I nasceu com o compromisso de fortalecer a gestão das APAEs por meio
-            de tecnologia, conhecimento técnico e apoio contínuo.
-          </p>
+      <h2 class="sectionTitle">Nossa essência</h2>
+      <p class="sectionSub">Três pilares que guiam o S@I em cada evolução do sistema.</p>
+
+      <div class="prisms">
+        <div class="prism">
+          <div class="miniChip" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm0-14a6 6 0 1 0 6 6 6 6 0 0 0-6-6zm0 10a4 4 0 1 1 4-4 4 4 0 0 1-4 4z"/></svg>
+          </div>
+          <h3>Missão</h3>
+          <p>Contribuir com a melhoria da educação especial por meio de uma gestão eficiente, participativa e baseada em dados.</p>
+        </div>
+
+        <div class="prism">
+          <div class="miniChip" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 5c5.5 0 9.6 4.2 10.8 6-.9 1.3-5 8-10.8 8S2.4 12.3 1.2 11C2.4 9.2 6.5 5 12 5zm0 12c3.3 0 6-2.7 6-6s-2.7-6-6-6-6 2.7-6 6 2.7 6 6 6z"/></svg>
+          </div>
+          <h3>Visão</h3>
+          <p>Ser referência nacional em soluções tecnológicas de avaliação, gestão e planejamento institucional para APAEs.</p>
+        </div>
+
+        <div class="prism">
+          <div class="miniChip" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5z"/></svg>
+          </div>
+          <h3>Valores</h3>
+          <p>Compromisso com a educação especial, transparência, responsabilidade social, inovação e parceria.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIALS + SUPPORT (steps) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="sectionTitle">Solução completa, uso descomplicado</h2>
+      <p class="sectionSub">Uma plataforma pensada para rotina real: acesso fácil, consistência, e menos esforço manual.</p>
+
+      <div class="steps">
+        <div class="stepList">
+          <div class="step">
+            <div class="stepDot"><i class="fa-solid fa-cloud"></i></div>
+            <div>
+              <strong>Sistema 100% Online</strong><br>
+              <span>Acesse de qualquer lugar, com segurança e estabilidade.</span>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="stepDot"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <div>
+              <strong>Multiplataforma</strong><br>
+              <span>Compatível com computador, tablet e smartphone.</span>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="stepDot"><i class="fa-solid fa-book-open"></i></div>
+            <div>
+              <strong>Treinamento completo</strong><br>
+              <span>Capacitação com manuais e videoaulas para a equipe.</span>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="stepDot"><i class="fa-solid fa-headset"></i></div>
+            <div>
+              <strong>Suporte ágil</strong><br>
+              <span>Atendimento humano durante o horário comercial.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="supportCard">
+          <div class="tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Apoio técnico de ponta a ponta</div>
+          <div class="big">Do primeiro acesso até a tomada de decisão</div>
           <p>
-            Desenvolvido a partir das reais necessidades das APAEs, o S@I atua como
-            uma ponte entre dados e decisões, ajudando a transformar diagnósticos em
-            ações concretas que impactam positivamente a vida dos assistidos e suas famílias.
+            O S@I não entrega "somente relatórios". Ele organiza o caminho:
+            <span class="accent">diagnóstico</span> → <span class="accent">metas</span> → <span class="accent">acompanhamento</span>.
+            Assim, os dados viram ações estratégicas com clareza e rastreabilidade.
           </p>
-        </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <img src="https://via.placeholder.com/800x600/5a3f72/ffffff?text=Gest%C3%A3o+Integrada"
-               alt="Gestão Integrada S@I"
-               class="img-fluid about-image">
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- MISSÃO / VISÃO / VALORES -->
-  <section class="about-section bg-light">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-4" data-aos="fade-up">
-          <div class="about-card text-center">
-            <i class="fas fa-bullseye about-feature-icon"></i>
-            <h3 class="fw-bold">Missão</h3>
-            <p>
-              Contribuir com a melhoria da educação especial por meio de uma gestão
-              eficiente, participativa e baseada em dados.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="about-card text-center">
-            <i class="fas fa-eye about-feature-icon"></i>
-            <h3 class="fw-bold">Visão</h3>
-            <p>
-              Ser referência nacional em soluções tecnológicas de avaliação,
-              gestão e planejamento institucional para APAEs.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="about-card text-center">
-            <i class="fas fa-heart about-feature-icon"></i>
-            <h3 class="fw-bold">Valores</h3>
-            <p>
-              Compromisso com a educação especial, transparência,
-              responsabilidade social, inovação e parceria.
-            </p>
+          <div class="pillRow" style="margin-top: 14px;">
+            <div class="pill"><i class="fa-solid fa-file-lines"></i> Relatórios visuais</div>
+            <div class="pill"><i class="fa-solid fa-bullseye"></i> Metas e prazos</div>
+            <div class="pill"><i class="fa-solid fa-user-graduate"></i> Apoio ao PEI</div>
+            <div class="pill"><i class="fa-solid fa-shield"></i> Prestação de contas</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- DIFERENCIAIS -->
-  <section class="about-section">
-    <div class="container">
-      <h2 class="about-title text-center mb-4" data-aos="fade-up">
-        Solução completa, uso descomplicado
-      </h2>
-      <p class="about-lead text-center mb-5" data-aos="fade-up" data-aos-delay="100">
-        O S@I foi desenvolvido para tornar a rotina das APAEs mais simples,
-        organizada e produtiva.
-      </p>
+ <!-- TEAM -->
+ <section class="section teamSection">
+  <div class="container">
+    <div class="sectionHeader">
+      <div>
+        <h2 class="sectionTitle">Quem está por trás do S@I</h2>
+        <p class="sectionSub">Profissionais comprometidos com a educação especial e com a realidade das APAEs.</p>
+      </div>
+      <div class="headerBadge">
+        <i class="fa-solid fa-users"></i>
+        <span>Nossa Equipe</span>
+      </div>
+    </div>
 
-      <div class="row g-4">
-        <div class="col-md-6" data-aos="fade-up">
-          <div class="about-card">
-            <i class="fas fa-cloud about-feature-icon"></i>
-            <h4>Sistema 100% Online</h4>
-            <p>Acesse de qualquer lugar, com segurança e estabilidade.</p>
+    <div class="teamGrid">
+      <div class="personCard">
+        <div class="personHeader">
+          <div class="avatarLarge">
+            <div class="avatarGlow"></div>
+            <img src="img/about/larissa-about.png" alt="Larissa Sara">
+          </div>
+          <div class="personBadge">
+            <i class="fa-solid fa-code"></i>
           </div>
         </div>
-
-        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="about-card">
-            <i class="fas fa-mobile-alt about-feature-icon"></i>
-            <h4>Multiplataforma</h4>
-            <p>Compatível com computador, tablet e smartphone.</p>
+        <div class="personContent">
+          <h3>Larissa Sara da Cunha</h3>
+          <div class="roleTag">
+            <i class="fa-solid fa-rocket"></i>
+            Co-fundadora & Desenvolvedora
+          </div>
+          <p class="bio">Especialista em Aplicações Web, Fullstack Spring e Angular. Responsável pela arquitetura técnica e desenvolvimento do sistema S@I.</p>
+          <div class="skillTags">
+            <span class="skillTag">Spring</span>
+            <span class="skillTag">Angular</span>
+            <span class="skillTag">Fullstack</span>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="about-card">
-            <i class="fas fa-graduation-cap about-feature-icon"></i>
-            <h4>Treinamento Completo</h4>
-            <p>Capacitação com manuais e videoaulas.</p>
+      <div class="personCard">
+        <div class="personHeader">
+          <div class="avatarLarge">
+            <div class="avatarGlow"></div>
+            <img src="img/about/silver-about.jpg" alt="Silvério Luiz">
+          </div>
+          <div class="personBadge">
+            <i class="fa-solid fa-graduation-cap"></i>
           </div>
         </div>
-
-        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="about-card">
-            <i class="fas fa-headset about-feature-icon"></i>
-            <h4>Suporte Ágil</h4>
-            <p>Atendimento humano durante todo o horário comercial.</p>
+        <div class="personContent">
+          <h3>Silvério Luiz de Sousa</h3>
+          <div class="roleTag">
+            <i class="fa-solid fa-lightbulb"></i>
+            Co-fundador & Especialista
+          </div>
+          <p class="bio">Mestre em Meio Ambiente e Tecnologias, Professor de Tecnologias. Especialista em metodologias educacionais e gestão institucional.</p>
+          <div class="skillTags">
+            <span class="skillTag">Educação</span>
+            <span class="skillTag">Gestão</span>
+            <span class="skillTag">Metodologia</span>
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- COMO ATUAMOS -->
-  <section class="about-section bg-light">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6 order-lg-2" data-aos="fade-left">
-          <h2 class="about-title mb-4">Apoio técnico de ponta a ponta</h2>
-          <p class="about-lead">
-            Acompanhamos cada etapa da implantação e utilização do sistema.
-          </p>
-          <p>
-            Nosso suporte garante que os dados gerados se transformem em decisões
-            estratégicas e ações concretas.
-          </p>
-        </div>
-
-        <div class="col-lg-6 order-lg-1" data-aos="fade-right">
-          <ul class="list-unstyled fs-5">
-            <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i>Relatórios visuais e detalhados</li>
-            <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i>Acompanhamento de metas</li>
-            <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i>Apoio à construção do PEI</li>
-            <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i>Indicadores institucionais</li>
-            <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i>Suporte à prestação de contas</li>
-          </ul>
-        </div>
+    <div class="historyCard">
+      <div class="historyIcon">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 5h-2v6l5 3 1-1.7-4-2.3V7z"/></svg>
       </div>
-    </div>
-  </section>
-
-  <!-- EQUIPE -->
-  <section class="about-section">
-    <div class="container">
-      <h2 class="about-title text-center mb-3" data-aos="fade-up">
-        Quem está por trás do S@I
-      </h2>
-      <p class="about-lead text-center mb-5" data-aos="fade-up" data-aos-delay="100">
-        Profissionais comprometidos com a educação especial
-      </p>
-
-      <div class="row justify-content-center g-5">
-        <div class="col-md-5" data-aos="fade-up">
-          <div class="about-card text-center">
-            <img src="img/about/larissa-about.png" alt="Larissa Sara" class="rounded-circle mb-4" width="150" height="150">
-            <h4 class="fw-bold text-primary">Larissa Sara da Cunha</h4>
-            <p class="text-warning fw-semibold">Co-fundadora & Desenvolvedora</p>
-            <p class="text-muted">
-              Especialista em Aplicações Web, Fullstack Spring e Angular.
-            </p>
+      <div class="historyContent">
+        <h3>Nossa História</h3>
+        <p>
+          O S@I nasceu da escuta ativa das APAEs e da experiência prática de seus idealizadores, 
+          unindo tecnologia, educação e gestão para transformar realidades — com suporte e evolução contínua. 
+          Cada funcionalidade foi pensada a partir das necessidades reais do dia a dia das instituições.
+        </p>
+        <div class="historyStats">
+          <div class="stat">
+            <div class="statNumber">2020</div>
+            <div class="statLabel">Ano de fundação</div>
           </div>
-        </div>
-
-        <div class="col-md-5" data-aos="fade-up" data-aos-delay="100">
-          <div class="about-card text-center">
-            <img src="img/about/silver-about.jpg" alt="Silvério Luiz" class="rounded-circle mb-4" width="150" height="150">
-            <h4 class="fw-bold text-primary">Silvério Luiz de Sousa</h4>
-            <p class="text-warning fw-semibold">Co-fundador & Especialista</p>
-            <p class="text-muted">
-              Mestre em Meio Ambiente e Tecnologias, Professor de Tecnologias.
-            </p>
+          <div class="stat">
+            <div class="statNumber">50+</div>
+            <div class="statLabel">APAEs atendidas</div>
           </div>
-        </div>
-      </div>
-
-      <div class="row mt-5">
-        <div class="col-12" data-aos="fade-up">
-          <div class="about-card">
-            <p class="mb-0">
-              <strong>Nossa História:</strong> O S@I nasceu da escuta ativa das APAEs
-              e da experiência prática de seus idealizadores, unindo tecnologia,
-              educação e gestão para transformar realidades.
-            </p>
+          <div class="stat">
+            <div class="statNumber">24/7</div>
+            <div class="statLabel">Suporte dedicado</div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA -->
-  <section class="about-cta text-center">
-    <div class="container">
-      <h2 class="mb-4" data-aos="fade-up">Quer ver o S@I em ação?</h2>
-      <p class="about-lead mb-5" data-aos="fade-up" data-aos-delay="100">
-        Agende uma demonstração personalizada
-      </p>
-
-      <div class="row justify-content-center g-4">
-        <div class="col-md-4" data-aos="fade-up">
-          <a href="https://wa.me/5567981742192" class="btn btn-warning btn-lg w-100">
-            <i class="fab fa-whatsapp me-2"></i> WhatsApp
-          </a>
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <div class="ctaBox">
+      <div class="ctaGrid">
+        <div>
+          <h2 class="ctaTitle">Quer ver o S@I em ação?</h2>
+          <p class="ctaText">Agende uma demonstração personalizada para entender como o sistema se adapta à realidade da sua APAE.</p>
         </div>
 
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <a href="mailto:lstecnologiaesolucoes@gmail.com" class="btn btn-outline-light btn-lg w-100">
-            <i class="fas fa-envelope me-2"></i> E-mail
-          </a>
+        <div class="ctaBtns">
+          <button class="btnA" onclick="window.location.href='https://wa.me/5567981742192'">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </button>
+          <button class="btnB" onclick="window.location.href='mailto:lstecnologiaesolucoes@gmail.com'">
+            <i class="fa-solid fa-envelope"></i> E-mail
+          </button>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- FOOTER -->
   <div id="footer-placeholder"></div>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: true });
-  </script>
+  <script src="./js/quem-somos.js"></script>
 
+   <!-- Scripts -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  
+   <script src="js/main.js"></script>
 </body>
 </html>
