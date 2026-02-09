@@ -16,6 +16,7 @@
    @import "components/_footer.css";
    @import "components/_quem-somos.css";
    @import "components/_home.css";
+   @import "components/_lgpd.css";
    
    /* Estilos globais mínimos */
    body {
