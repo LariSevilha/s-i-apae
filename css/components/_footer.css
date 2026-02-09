@@ -1,76 +1,41 @@
-/* ===============================
-   FOOTER – MODERNO, LIMPO E RESPONSIVO 2026
-================================ */
-
 .footer {
-  background: linear-gradient(135deg, #0f1217 0%, #1a1f26 100%);
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.footer-logo {
-  max-height: 64px;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
-  transition: transform 0.3s ease;
-}
-
-.footer-logo:hover {
-  transform: scale(1.05);
+  background: var(--gradient-primary);
+  color: var(--light);
+  padding: 5rem 0 3rem;
+  position: relative;
 }
 
 .footer h5 {
-  color: var(--secondary, #00d084); /* ajuste para sua cor principal */
+  font-family: var(--font-heading);
+  color: var(--secondary);
   font-weight: 700;
-  font-size: 1.3rem;
-  margin-bottom: 1.4rem;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-  opacity: 0.95;
+  margin-bottom: 1.5rem;
 }
 
-.footer-links a,
-.contact-list a {
-  color: rgba(255, 255, 255, 0.78);
-  text-decoration: none;
-  transition: all 0.28s ease;
-  display: block;
-  padding: 0.4rem 0;
-  font-size: 0.98rem;
+.footer a {
+  color: var(--muted);
+  transition: var(--transition);
 }
 
-.footer-links a:hover,
-.contact-list a:hover {
-  color: var(--secondary, #00d084);
-  padding-left: 8px;
-  transform: translateX(4px);
-}
-
-.contact-list i {
-  color: var(--secondary, #00d084);
-  min-width: 26px;
-  font-size: 1.35rem;
+.footer a:hover {
+  color: var(--secondary);
+  transform: translateX(5px);
 }
 
 .social-icons a {
-  color: rgba(255, 255, 255, 0.9);
-  transition: all 0.35s ease;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  transition: var(--transition);
 }
 
 .social-icons a:hover {
-  color: var(--secondary, #00d084);
-  transform: translateY(-5px) scale(1.15);
+  transform: translateY(-5px);
+  background: rgba(var(--secondary), 0.15);
 }
-
-.footer hr {
-  border-color: rgba(255, 255, 255, 0.11);
-  margin: 3.5rem 0 2.5rem;
-}
-
-.back-to-top {
-  transition: all 0.3s ease;
-}
-
-.back-to-top:hover {
-  color: var(--secondary, #00d084) !important;
-  opacity: 1 !important;
-}
- 

@@ -1,0 +1,29 @@
+.stat-item {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 1.8rem;
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: var(--transition);
+  }
+  
+  .stat-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .stat-label {
+    font-size: 0.95rem;
+    color: var(--muted-2);
+    margin-top: 0.5rem;
+  }

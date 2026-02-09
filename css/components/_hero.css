@@ -1,100 +1,45 @@
-/* ===============================
-   HERO – REORGANIZAÇÃO PREMIUM
-================================ */
-
-.hero {
+.module-hero {
   position: relative;
-  background: #000;
+  padding: clamp(6rem, 12vw, 10rem) 1rem 6rem;
+  text-align: center;
+  background: linear-gradient(145deg, var(--primary-darker), var(--bg-dark));
+  overflow: hidden;
 }
 
-/* Vídeo em full */
-.hero-video video {
+.module-hero::before {
+  content: '';
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background: radial-gradient(circle at 70% 30%, rgba(var(--secondary), 0.08), transparent 60%);
+  pointer-events: none;
 }
 
-/* Overlay mais elegante */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(42,26,56,.9) 0%, rgba(42,26,56,.75) 40%, rgba(42,26,56,.4) 70%, rgba(42,26,56,.1) 100%),
-    linear-gradient(180deg, rgba(0,0,0,.6), rgba(0,0,0,.4));
-  z-index: 1;
-}
-
-/* Conteúdo */
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-/* Badge */
 .hero-badge {
-  background: rgba(255,255,255,.15);
-  backdrop-filter: blur(8px);
-  padding: .5rem 1.2rem;
-  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.4rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-pill);
+  backdrop-filter: var(--glass-blur);
+  color: var(--secondary);
   font-weight: 600;
-  font-size: .85rem;
-  border: 1px solid rgba(255,255,255,.25);
+  margin-bottom: 1.8rem;
 }
 
-/* Título */
 .hero-title {
   font-family: var(--font-heading);
-  font-size: 3.5rem;
-  line-height: 1.1;
+  font-weight: 800;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  line-height: 1.05;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.025em;
 }
 
-.hero-title span {
-  background: linear-gradient(90deg, var(--secondary), #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Subtítulo */
 .hero-subtitle {
-  max-width: 550px;
-  font-size: 1.1rem;
-  color: rgba(255,255,255,.9);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  color: var(--muted);
 }
-
-/* ===============================
-   CARDS DO HERO (DESKTOP)
-================================ */
-
-.module-icons-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.2rem;
-  position: relative;
-}
-
-.module-icons-grid .module-card {
-  background: rgba(255,255,255,.12);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  padding: 1.5rem;
-  color: #fff;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  font-weight: 600;
-  border: 1px solid rgba(255,255,255,.2);
-  transition: all .4s ease;
-}
-
-.module-icons-grid .module-card i {
-  font-size: 1.5rem;
-  color: var(--secondary);
-}
-
-.module-icons-grid .module-card:hover {
-  transform: translateY(-8px) scale(1.04);
-  background: rgba(255,255,255,.18);
-}
- 

@@ -1,10 +1,21 @@
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--text-dark);
-  background: var(--bg-light);
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; }
+h2 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; }
+h3 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; }
+h4 { font-size: 1.4rem; font-weight: 700; }
+
+p {
+  margin-bottom: 1.2rem;
+  color: var(--muted);
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--muted-2);
 }

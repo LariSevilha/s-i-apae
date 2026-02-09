@@ -1,5 +1,5 @@
 /* ==========================================================================
-   IMPORTAÇÕES
+   MAIN.CSS - IMPORTA TODOS OS COMPONENTES
    ========================================================================== */
 
    @import "base/_variables.css";
@@ -8,17 +8,22 @@
    
    @import "components/_navbar.css";
    @import "components/_hero.css";
-   @import "components/_modules.css";
-   @import "components/_benefits.css";  
-   @import "components/_cta.css"; 
-   @import "components/_statics.css";
-   @import "components/_start.css"; 
+   @import "components/_card.css";
+   @import "components/_button.css";
+   @import "components/_section.css";
+   @import "components/_dashboard-mockup.css";
+   @import "components/_stats.css";
    @import "components/_footer.css";
-   
    @import "components/_quem-somos.css";
-   @import "components/_educacao.css";
-   @import "components/_financeiro.css";
-   @import "components/_health.css";
-   @import "components/_social.css";
-
+   @import "components/_home.css";
    
+   /* Estilos globais mínimos */
+   body {
+     margin: 0;
+     font-family: var(--font-body);
+     background: var(--bg-dark);
+     color: var(--light);
+     overflow-x: hidden;
+   }
+   
+   a { color: inherit; text-decoration: none; }

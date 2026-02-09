@@ -1,7 +1,7 @@
 // Carrega includes e inicializa funcionalidades
 document.addEventListener('DOMContentLoaded', function() {
     // Carregar Navbar
-    fetch('includes/navbar.html')
+    fetch('../includes/navbar.html')
       .then(response => response.text())
       .then(data => {
         document.querySelector('#navbar-placeholder').innerHTML = data;
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .catch(err => console.error('Erro carregando navbar:', err));
   
     // Carregar Footer
-    fetch('includes/footer.html')
+    fetch('../includes/footer.html')
       .then(response => response.text())
       .then(data => {
         document.querySelector('#footer-placeholder').innerHTML = data;
@@ -99,4 +99,27 @@ document.addEventListener('DOMContentLoaded', function() {
   
     elements.forEach(el => observer.observe(el));
   });
-  
+  // Navbar scrolled
+(function(){
+  const nav = document.querySelector(".navbar-sai");
+  if(!nav) return;
+
+  const onScroll = () => {
+    if(window.scrollY > 12) nav.classList.add("scrolled");
+    else nav.classList.remove("scrolled");
+  };
+
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+})();
+
+// Back to top smooth
+(function(){
+  const btn = document.querySelector(".back-to-top");
+  if(!btn) return;
+
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+})();
