@@ -1,42 +1,47 @@
-.section {
+.section{
     position: relative;
-    padding: clamp(5rem, 10vw, 8rem) 1rem;
+    padding: clamp(4rem, 8vw, 6.5rem) 0;
   }
   
-  .section.dark {
+  .section.dark{
     background: var(--gradient-primary);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
   }
   
-  .section-header {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 4rem;
+  .section-header{
+    text-align:center;
+    max-width: 860px;
+    margin: 0 auto 3.2rem;
   }
   
-  .section-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.5rem 1.2rem;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+  .section-label{
+    display:inline-flex;
+    align-items:center;
+    gap:.6rem;
+    padding: .55rem 1.2rem;
     border-radius: var(--radius-pill);
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.12);
     color: var(--secondary);
-    font-weight: 600;
-    text-transform: uppercase;
+    font-weight: 900;
+    font-family: var(--font-heading);
     margin-bottom: 1.2rem;
   }
   
-  .section-title {
+  .section-title{
     font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
-    margin-bottom: 1rem;
+    font-weight: 900;
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    margin-bottom: .8rem;
+    letter-spacing: -0.02em;
   }
   
-  .section-subtitle {
+  .section-subtitle{
+    color: rgba(255,255,255,.72);
     font-size: 1.15rem;
-    color: var(--muted);
-    max-width: 680px;
+    line-height: 1.7;
     margin: 0 auto;
+    max-width: 760px;
   }
+  

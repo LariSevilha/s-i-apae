@@ -1,0 +1,50 @@
+#como-comecar .process-step{
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 18px;
+    padding: 2.2rem 1.7rem;
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    height:100%;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  
+  #como-comecar .process-step:hover{
+    transform: translateY(-10px);
+    border-color: rgba(var(--secondary-rgb), .26);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  #como-comecar .step-icon{
+    width: 78px;
+    height: 78px;
+    border-radius: 999px;
+    display:grid;
+    place-items:center;
+    margin: 0 auto 1rem;
+    background: rgba(var(--secondary-rgb), .18);
+    border: 1px solid rgba(var(--secondary-rgb), .24);
+    color: var(--secondary);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  #como-comecar .step-icon i{
+    line-height:1;
+    font-size: 1.5rem;
+    display:block;
+  }
+  
+  #como-comecar h4{
+    font-family: var(--font-heading);
+    font-weight: 900;
+    color: rgba(255,255,255,.95);
+  }
+  #como-comecar p{
+    color: rgba(255,255,255,.72);
+    margin:0;
+    line-height: 1.65;
+  }
+  

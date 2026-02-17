@@ -1,0 +1,57 @@
+#beneficios .benefit-card{
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 18px;
+    padding: 2rem 1.6rem;
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    height:100%;
+    display:grid;
+    grid-template-rows: auto auto 1fr;
+    gap: .85rem;
+  }
+  
+  #beneficios .benefit-card:hover{
+    transform: translateY(-10px);
+    border-color: rgba(var(--secondary-rgb), .28);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  #beneficios .benefit-icon{
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    display:grid;
+    place-items:center;
+    background: rgba(var(--secondary-rgb), .16);
+    border: 1px solid rgba(var(--secondary-rgb), .22);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  #beneficios .benefit-icon i{
+    font-size: 1.25rem;
+    line-height:1;
+    display:block;
+    color: var(--secondary);
+  }
+  
+  #beneficios h4{
+    font-family: var(--font-heading);
+    font-weight: 900;
+    margin:0;
+    color: rgba(255,255,255,.95);
+  }
+  #beneficios p{
+    margin:0;
+    color: rgba(255,255,255,.72);
+    line-height:1.65;
+  }
+  
+  @media (max-width:576px){
+    #beneficios .benefit-card{
+      text-align:center;
+      justify-items:center;
+    }
+  }
+  

@@ -1,0 +1,34 @@
+/* =========================
+   BLOG - GALERIA DE VÍDEOS
+========================= */
+
+.video-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow-glass);
+    transition: var(--transition);
+  }
+  
+  .video-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .video-info {
+    padding: 1.2rem;
+  }
+  
+  .video-info h5 {
+    font-weight: 700;
+    margin-bottom: .5rem;
+  }
+  
+  .video-info p {
+    font-size: .9rem;
+    color: var(--muted-2);
+    margin: 0;
+  }
+  

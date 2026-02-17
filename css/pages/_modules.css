@@ -1,0 +1,86 @@
+/* #modulos isolado - NÃO conflita com o hero */
+#modulos{
+  position: relative;
+  overflow:hidden;
+}
+
+#modulos::before,
+#modulos::after{
+  content:'';
+  position:absolute;
+  border-radius:50%;
+  filter: blur(90px);
+  opacity:.14;
+  pointer-events:none;
+}
+#modulos::before{
+  width:650px;height:650px;
+  top:-220px;left:-180px;
+  background: radial-gradient(circle at 40% 30%, rgba(90,63,114,.9), transparent 70%);
+}
+#modulos::after{
+  width:550px;height:550px;
+  bottom:-200px;right:-150px;
+  background: radial-gradient(circle at 60% 70%, rgba(255,193,7,.9), transparent 70%);
+}
+
+#modulos .module-card{
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 22px;
+  padding: 2.4rem 1.9rem;
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  height:100%;
+  position:relative;
+  overflow:hidden;
+}
+#modulos .module-card:hover{
+  transform: translateY(-12px);
+  border-color: rgba(var(--secondary-rgb), .28);
+  box-shadow: var(--shadow-lg);
+}
+
+#modulos .module-icon-wrapper{
+  width: 86px;
+  height: 86px;
+  border-radius: 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin: 0 auto 1.2rem;
+  background: linear-gradient(135deg, #5a3f72 0%, #7b5aa6 100%);
+  box-shadow: 0 12px 35px rgba(90,63,114,.40);
+  transition: var(--transition);
+}
+#modulos .module-icon-wrapper i{
+  color:#fff;
+  font-size: 2.2rem;
+  line-height:1;
+  display:block;
+}
+
+#modulos .module-card h3{
+  font-family: var(--font-heading);
+  font-weight: 900;
+  margin-top: .8rem;
+  margin-bottom: .6rem;
+  color: rgba(255,255,255,.95);
+}
+#modulos .module-card p{
+  color: rgba(255,255,255,.72);
+  line-height: 1.65;
+}
+
+#modulos .module-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  font-weight: 900;
+  color: var(--secondary);
+  transition: var(--transition-fast);
+}
+#modulos .module-btn i{ transition: var(--transition-fast); }
+#modulos .module-btn:hover{ transform: translateX(4px); }
+#modulos .module-btn:hover i{ transform: translateX(6px); }

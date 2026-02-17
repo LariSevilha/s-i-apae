@@ -113,13 +113,9 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener("scroll", onScroll, { passive: true });
 })();
 
-// Back to top smooth
-(function(){
-  const btn = document.querySelector(".back-to-top");
-  if(!btn) return;
-
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-})();
+document.addEventListener("click", (e) => {
+  const a = e.target.closest(".back-to-top");
+  if (!a) return;
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});

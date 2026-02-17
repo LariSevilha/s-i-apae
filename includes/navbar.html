@@ -2,40 +2,74 @@
   <div class="navbar-blur"></div>
 
   <div class="container">
-    <a class="navbar-brand" href="../index.html">
-      <img src="../img/logo/logo-sai.png" alt="S@I - Sistema APAE" height="52">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+      <img src="../img/logo/logo-sai.png" alt="S@I - Sistema APAE" height="52" class="nav-logo">
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+      aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
         <li class="nav-item">
-          <a class="nav-link" href="../index.html">Início</a>
+          <a class="nav-link" href="../index.html">
+            <i class="fas fa-house-chimney nav-ico"></i>
+            Início
+          </a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/blog.html">
+            <i class="fa-brands fa-youtube" style="color: #ffc107ff;"></i>
+            Blog
+          </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#"
+             id="navbarDropdown" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-layer-group nav-ico"></i>
             Módulos
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="../pages/educacao.html">Pedagógico</a></li>
-            <li><a class="dropdown-item" href="../pages/saude.html">Saúde</a></li>
-            <li><a class="dropdown-item" href="../pages/social.html">Assistência Social</a></li>
-            <li><a class="dropdown-item" href="../pages/financeiro.html">Financeiro</a></li>
+
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="../pages/educacao.html">
+                <i class="fas fa-graduation-cap"></i> Pedagógico
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="../pages/saude.html">
+                <i class="fas fa-heart-pulse"></i> Saúde
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="../pages/social.html">
+                <i class="fas fa-hands-helping"></i> Assistência Social
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="../pages/financeiro.html">
+                <i class="fas fa-wallet"></i> Financeiro
+              </a>
+            </li>
           </ul>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="../pages/quem-somos.html">Quem Somos</a>
+          <a class="nav-link" href="../pages/quem-somos.html">
+            <i class="fas fa-heart nav-ico"></i>
+            Quem Somos
+          </a>
         </li>
       </ul>
 
-      <a href="https://wa.me/5567981742192?text=Quero%20agendar%20demonstra%C3%A7%C3%A3o" 
-        class="btn btn-whatsapp-demo ms-lg-3 px-4 d-none d-lg-inline-flex align-items-center gap-2">
+      <a href="https://wa.me/5567981742192?text=Quero%20agendar%20demonstra%C3%A7%C3%A3o"
+         class="btn btn-whatsapp-demo ms-lg-3 px-4 d-none d-lg-inline-flex align-items-center gap-2">
         <i class="fab fa-whatsapp"></i> Demonstração
       </a>
     </div>
   </div>
-</div>
 </nav>

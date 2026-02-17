@@ -1,30 +1,24 @@
-/* ==========================================================================
-   MAIN.CSS - IMPORTA TODOS OS COMPONENTES
-   ========================================================================== */
+/* css/main.css */
+@import "./base/_tokens.css";
+@import "./base/_typography.css";
+@import "./base/_layout.css";
+/* components */
+@import "./components/_acocordion.css";
+@import "./components/_button.css";
+@import "./components/_dashboard.css";
+@import "./components/_cards.css";
+@import "./components/_navbar.css";
+@import "./components/_footer.css";
+@import "./components/_stats.css";
+/* pages */
+@import "./pages/_about.css";
+@import "./pages/_home.css";
+@import "./pages/_modules.css";
+@import "./pages/_module-page.css";
+@import "./pages/_quem-somos.css";
+@import "./pages/_lgpd.css";
+@import "./pages/_reports.css";
+@import "./pages/_blog.css";
 
-   @import "base/_variables.css";
-   @import "base/_reset.css";
-   @import "base/_typography.css";
-   
-   @import "components/_navbar.css";
-   @import "components/_hero.css";
-   @import "components/_card.css";
-   @import "components/_button.css";
-   @import "components/_section.css";
-   @import "components/_dashboard-mockup.css";
-   @import "components/_stats.css";
-   @import "components/_footer.css";
-   @import "components/_quem-somos.css";
-   @import "components/_home.css";
-   @import "components/_lgpd.css";
-   
-   /* Estilos globais mínimos */
-   body {
-     margin: 0;
-     font-family: var(--font-body);
-     background: var(--bg-dark);
-     color: var(--light);
-     overflow-x: hidden;
-   }
-   
-   a { color: inherit; text-decoration: none; }
+
+@import "./responsive/_mobile.css";

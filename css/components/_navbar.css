@@ -1,50 +1,177 @@
-.navbar-sai {
-  position: sticky;
-  top: 0;
-  z-index: 1030;
-  background: rgba(15, 11, 22, 0.55);
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: var(--glass-blur);
-  transition: all var(--transition);
-  padding: 1rem 0;
-  box-shadow: var(--shadow-md);
-}
+/* =========================
+   NAVBAR — Glass Premium
+   ========================= */
 
-.navbar-sai.scrolled {
-  padding: 0.8rem 0;
-  background: rgba(10, 7, 16, 0.85);
-  box-shadow: var(--shadow-lg);
-}
-
-.navbar-brand img {
-  height: 52px;
-  transition: transform var(--transition);
-}
-
-.nav-link {
-  color: var(--muted) !important;
-  font-weight: 600;
-  padding: 0.6rem 1rem !important;
-  border-radius: var(--radius);
-  transition: var(--transition);
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--secondary) !important;
-  background: var(--glass-bg);
-}
-
-.btn-whatsapp-demo {
-  background: var(--gradient-secondary) !important;
-  color: #1a1a1a !important;
-  border-radius: var(--radius-pill) !important;
-  padding: 0.8rem 1.8rem !important;
-  font-weight: 700;
-  box-shadow: var(--shadow-md);
-}
-
-.btn-whatsapp-demo:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
-}
+   .navbar-sai{
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    border-bottom: 1px solid rgba(255,255,255,.10);
+    background: rgba(10, 7, 16, 0.58);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 18px 55px rgba(0,0,0,.25);
+    padding: 0.95rem 0;
+    transition: all .25s ease;
+    overflow: visible;
+  }
+  
+  .navbar-sai .navbar-blur{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:
+      radial-gradient(900px 260px at 20% 0%, rgba(255,193,7,.12), transparent 55%),
+      radial-gradient(700px 240px at 85% 10%, rgba(90,63,114,.18), transparent 60%);
+    opacity: .9;
+  }
+  
+  .navbar-sai .container{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .navbar-sai.scrolled{
+    background: rgba(10, 7, 16, 0.86);
+    padding: 0.80rem 0;
+    box-shadow: 0 28px 80px rgba(0,0,0,.38);
+  }
+  
+  .navbar-sai .nav-logo{
+    filter: drop-shadow(0 12px 26px rgba(0,0,0,.35));
+    transform-origin: left center;
+    transition: transform .25s ease;
+  }
+  .navbar-sai .navbar-brand:hover .nav-logo{
+    transform: scale(1.02);
+  }
+  
+  /* Links */
+  .navbar-sai .nav-link{
+    color: rgba(255,255,255,.78) !important;
+    font-weight: 800;
+    padding: .62rem 1rem !important;
+    border-radius: 14px;
+    transition: all .22s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+  }
+  
+  .navbar-sai .nav-ico{
+    font-size: .95rem;
+    line-height: 1;
+    color: rgba(255,193,7,.85);
+    opacity: .95;
+  }
+  
+  .navbar-sai .nav-link:hover,
+  .navbar-sai .nav-link:focus{
+    color: #fff !important;
+    background: rgba(255,255,255,.06);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.10);
+    transform: translateY(-1px);
+  }
+  
+  .navbar-sai .nav-link.active{
+    color: var(--secondary) !important;
+    background: rgba(255,193,7,.10);
+    box-shadow: inset 0 0 0 1px rgba(255,193,7,.20);
+  }
+  
+  /* Dropdown (Bootstrap) */
+  .navbar-sai .dropdown-menu{
+    background: rgba(14, 10, 20, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 16px;
+    box-shadow: 0 30px 90px rgba(0,0,0,.55);
+    padding: .55rem;
+    margin-top: .65rem;
+  }
+  
+  .navbar-sai .dropdown-item{
+    color: rgba(255,255,255,.82);
+    border-radius: 12px;
+    padding: .75rem .85rem;
+    font-weight: 800;
+    display:flex;
+    align-items:center;
+    gap: .65rem;
+    transition: all .18s ease;
+  }
+  
+  .navbar-sai .dropdown-item i{
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    display:grid;
+    place-items:center;
+    background: rgba(255,193,7,.12);
+    border: 1px solid rgba(255,193,7,.18);
+    color: var(--secondary);
+    line-height: 1;
+  }
+  
+  .navbar-sai .dropdown-item:hover,
+  .navbar-sai .dropdown-item:focus{
+    background: rgba(255,255,255,.06);
+    color: #fff;
+    transform: translateX(2px);
+  }
+  
+  /* Botão demo */
+  .btn-whatsapp-demo{
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%) !important;
+    color: #1a1a1a !important;
+    border-radius: 999px !important;
+    padding: .85rem 1.35rem !important;
+    font-weight: 900;
+    box-shadow: 0 18px 45px rgba(255,193,7,.22);
+    transition: all .25s ease;
+    border: 0 !important;
+  }
+  
+  .btn-whatsapp-demo:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 25px 70px rgba(255,193,7,.35);
+  }
+  
+  /* Toggler */
+  .navbar-sai .navbar-toggler{
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 14px;
+    padding: .55rem .7rem;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+  }
+  
+  .navbar-sai .navbar-toggler:focus{
+    box-shadow: 0 0 0 .2rem rgba(255,193,7,.18);
+  }
+  
+  .navbar-sai .navbar-toggler-icon{
+    filter: brightness(0) invert(1);
+  }
+  
+  /* Mobile collapse */
+  @media (max-width: 991.98px){
+    .navbar-sai .navbar-collapse{
+      margin-top: .85rem;
+      padding: .8rem;
+      border-radius: 16px;
+      background: rgba(14, 10, 20, 0.70);
+      border: 1px solid rgba(255,255,255,.10);
+      backdrop-filter: blur(14px);
+    }
+  
+    .navbar-sai .nav-link{
+      width: 100%;
+      justify-content: flex-start;
+    }
+  
+    .navbar-sai .dropdown-menu{
+      margin-top: .4rem;
+    }
+  }
+  

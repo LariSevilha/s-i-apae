@@ -1,0 +1,61 @@
+.card{
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 1.8rem;
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(255,193,7,.28);
+}
+
+.card-icon{
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 1.2rem;
+  border-radius: 999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,193,7,.18);
+  border: 1px solid rgba(255,193,7,.24);
+  color: var(--secondary);
+  box-shadow: 0 10px 22px rgba(0,0,0,.18);
+}
+
+.card-icon i{
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.icon-badge{
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  display:grid;
+  place-items:center;
+  background: rgba(255,193,7,.18);
+  border: 1px solid rgba(255,193,7,.24);
+  color: var(--secondary);
+  box-shadow: 0 10px 22px rgba(0,0,0,.18);
+}
+
+.icon-badge i{ font-size: 1.35rem; line-height: 1; }
+
+/* badges suaves */
+.badge-soft{
+  background: rgba(255,193,7,.12);
+  border: 1px solid rgba(255,193,7,.22);
+  color: var(--secondary);
+  font-weight: 700;
+  padding: .55rem .95rem;
+  border-radius: var(--radius-pill);
+}
