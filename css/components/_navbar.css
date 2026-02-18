@@ -61,7 +61,7 @@
   .navbar-sai .nav-ico{
     font-size: .95rem;
     line-height: 1;
-    color: rgba(255,193,7,.85);
+    color: #FE6405;
     opacity: .95;
   }
   
@@ -124,7 +124,7 @@
   /* Botão demo */
   .btn-whatsapp-demo{
     background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%) !important;
-    color: #1a1a1a !important;
+    color: white !important;
     border-radius: 999px !important;
     padding: .85rem 1.35rem !important;
     font-weight: 900;

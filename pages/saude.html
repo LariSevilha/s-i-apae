@@ -13,8 +13,17 @@
 
 <div id="navbar-placeholder"></div>
 
-<section class="module-hero">
-  <div class="container text-center">
+<!-- MODULE HERO (com imagem) -->
+<section class="module-hero module-hero--with-image">
+  <!-- imagem de fundo do hero -->
+  <div class="module-hero__bg" aria-hidden="true">
+    <img src="../img/saude.jpeg" alt="">
+  </div>
+
+  <!-- overlay por cima da imagem (mantém seu estilo roxo/dourado e legibilidade) -->
+  <div class="module-hero__overlay" aria-hidden="true"></div>
+
+  <div class="container text-center position-relative">
     <div class="hero-badge">
       <i class="fas fa-heartbeat"></i>
       <span>Saúde Digital</span>
@@ -28,12 +37,19 @@
     </p>
 
     <div class="d-flex justify-content-center gap-3 flex-wrap mt-5">
-      <div class="stat-item"><div class="stat-number">LGPD</div><div class="stat-label">Conformidade</div></div>
-      <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">Acesso controlado</div></div>
-      <div class="stat-item"><div class="stat-number">Multi</div><div class="stat-label">Equipe integrada</div></div>
+      <div class="stat-item">
+        <div class="stat-number">LGPD</div><div class="stat-label">Conformidade</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24/7</div><div class="stat-label">Acesso controlado</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">Multi</div><div class="stat-label">Equipe integrada</div>
+      </div>
     </div>
   </div>
 </section>
+
 
 <section class="section">
   <div class="container">

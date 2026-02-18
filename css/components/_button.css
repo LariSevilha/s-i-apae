@@ -9,12 +9,13 @@
   font-weight: 800;
   transition: var(--transition);
   border: 0;
+  color: white;
 }
 
 .btn-whatsapp,
 .btn-primary{
   background: var(--gradient-secondary);
-  color:#151515!important;
+  color:white !important;
   box-shadow: 0 12px 35px rgba(var(--secondary-rgb), .35);
 }
 .btn-whatsapp:hover,

@@ -63,4 +63,54 @@ body.page-module{
     font-weight: 600;
     margin-top: .2rem;
   }
-  
+
+  /* ===== HERO COM IMAGEM (cole no seu main.css) ===== */
+
+.module-hero--with-image{
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* camada da imagem */
+.module-hero__bg{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.module-hero__bg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transform: scale(1.04);
+  filter: contrast(1.05) saturate(1.08) brightness(.72);
+}
+
+/* overlay (roxo/dourado + escurece para texto ficar perfeito) */
+.module-hero__overlay{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse 950px 550px at 72% 18%, rgba(var(--secondary-rgb), .14), transparent 65%),
+    radial-gradient(ellipse 700px 420px at 18% 12%, rgba(255,255,255,.06), transparent 60%),
+    linear-gradient(180deg, rgba(10,7,16,.45), rgba(10,7,16,.85));
+}
+
+/* garante que conteúdo fica acima */
+.module-hero--with-image .container{
+  position: relative;
+  z-index: 2;
+}
+
+/* (opcional) micro brilho suave no topo */
+.module-hero--with-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background: linear-gradient(to bottom, rgba(0,0,0,.15), transparent 35%);
+  pointer-events:none;
+}
